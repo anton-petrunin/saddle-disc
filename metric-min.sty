@@ -1,0 +1,109 @@
+\usepackage[intlimits]{amsmath}
+\usepackage{amssymb,amsthm,pifont}
+\usepackage{bm}%makes better bold fornt in math
+\usepackage{ushort}
+\usepackage{manfnt}
+\usepackage{enumerate}
+\usepackage{epsfig,lpic,wrapfig}
+\usepackage{hyperref}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{tikz}
+
+%\usepackage[notref,notcite,color]{showkeys}
+\hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
+}
+
+
+\def\df{\buildrel \mathrm{def} \over{=\!\!=}}
+\def\parit#1{\medskip\noindent{\it #1}}
+\def\parbf#1{\medskip\noindent{\bf #1}}
+\def\qeds{\qed\par\medskip}
+\def\llangle{\langle\!\langle}
+\def\rrangle{\rangle\!\rangle}
+
+\def\eps{\varepsilon}
+\def\ge{\geqslant}
+\def\le{\leqslant}
+
+\def\phi{\varphi}
+\def\area{\mathop{\rm area}\nolimits}
+\def\length{\mathop{\rm length}\nolimits}
+\newcommand*{\rel}[1]{\ ({\rm rel.}\ {#1})}
+\def\CAT{\mathop{\rm CAT}\nolimits}
+\def\diam{\mathop{\rm diam}\nolimits}
+\def\DD{\mathbb{D}}
+\def\II{\mathbb{I}}
+\def\CC{\mathbb{C}}
+\def\RR{\mathbb{R}}
+\def\SS{\mathbb{S}}
+\def\T{\mathrm{T}}
+\def\ZZ{\mathbb{Z}}
+\def\Fill{\mathop{\rm Fill}}
+\def\dist{\mathop{\rm dist}\nolimits}
+\def\Conv{\mathop{\rm Conv}\nolimits}
+\def\Dom{\mathop{\rm Dom}\nolimits}
+\def\Geod{\mathop{\rm Geod}\nolimits}
+
+\def\l{\left}
+\def\r{\right}
+\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
+\def\:{\colon}
+\def\~{\tilde}
+
+\def\id{\mathrm{id}}
+\def\emptyset{\varnothing}
+
+
+
+\renewcommand{\thesubsection}{\thesection\Alph{subsection}}
+
+\newcounter{thm}[section]
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{section}.\arabic{thm}. #1.}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+
+\newenvironment{thm}{\claim}{\endclaim}
+
+\def\clm#1{\par\medskip\noindent\hbox{\bf #1.}
+\it\ %\ignorespaces
+}
+\newenvironment{nnthm}{\clm}{\endclaim}
+
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+
+
+%NUMBERONCIRC
+\newcommand*{\numform}[1]{\@numform{\@nameuse{c@#1}}}
+\newcommand*{\@numform}[1]%
+{\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\else\@ctrerr \fi}
+%EQNUMBER
+\newcounter{eqtn}
+\renewcommand{\@eqnnum}{\theeqtn}
+\renewcommand{\theeqtn}{\numform{eqtn}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\eqno\text{\numform{eqtn}\label{#1}}}
+
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
+
+\newcommand*{\zz}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}

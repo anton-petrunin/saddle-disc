@@ -1,0 +1,290 @@
+\documentclass{article}
+\usepackage{metric-min}
+%\usepackage{showkeys}
+
+\begin{document}
+
+\title{Monotonicity of saddle maps}
+\author{Anton Petrunin and Stephan Stadler}
+%\address{A. Petrunin\newline\vskip-4mm Math. Dept. PSU,University Park, PA 16802,USA}
+%\email{petrunin@math.psu.edu}
+%\address{S. Stadler\newline\vskip-4mm Math. Inst.,Universit\"at M\"unchen, Theresienstr. 39, D-80333 M\"unchen, Germany}\email{stadler@math.lmu.de}
+%\thanks{A.~Petrunin was partially supported by NSF grant DMS 1309340.}
+
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+We prove an analog of the univalentness theorem for saddle maps from disc to disc.
+\end{abstract}
+
+\section{Introduction}
+
+A map from a closed disc $\DD$ to a Euclidean space is called saddle if for any hypeplane $\Pi$ each connected component of the complement $\DD\backslash f^{-1}\Pi$ intersects the boundary $\partial \DD$.
+Ruled surfaces and the harmonic maps provide examples of such maps.
+
+In this note we prove a synthetic analog of the univalentness theorem for saddle maps from disc to disc.
+The original theorem is formulated for harmonic maps and  surfaces with nonpositive curvature.
+It was proved by Richard Schoen and Shing Tung Yau \cite{schoen-yau};
+an interesting generalization was obtained by J\"urgen Jost \cite{jost}.
+An extensive study of general saddle maps was given by Samuil Shefel \cite{shefel-2D} and \cite{shefel-3D};
+his work was inspired by a note of Alexander Alexandrov \cite{A} on intrinsic metric of general ruled surface.
+Part of the work of Samuil Shefel is described in a chapter of \cite{akp}.
+
+A continuous map $f\:X\to Y$ is called \emph{light} if the inverse image of any point $y\in Y$ is totally disconnected.
+
+\begin{thm}{Baby theorem}\label{baby}
+Let $f\:\DD\to \DD$ be a light saddle map.
+Assume that 
+the restriction $f|_{\partial\DD}$ is the identity map.
+Then $f$ is a homeomorphism.
+\end{thm}
+
+The proof of the baby theorem is as hard as the proof of the main theorem formulated below --- read the final remarks if it looks trivial for you.
+
+A map $f$ from a closed disc $\DD$ to a surface $\Delta$ with geodesic metric is called saddle if for any geodesic $[x,y]$ each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
+It is easy to see that this definition agrees with the one given above.
+
+A continuous  $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
+Note that according to the definition any monotonic map is onto.
+
+\begin{thm}{Main theorem}
+Let $(\DD,|{*}-{*}|)$ be a closed disc equipped with a metric $|{*}-{*}|$ such that any two points are joined by a unique geodesic and it depends continuously on the end points.
+Assume $f\:\DD\to (\DD,|{*}-{*}|)$ is a saddle map and the restriction of $f$ to the boundary $\partial\DD$ is a monotonic map $\partial\DD\to  \partial\DD$.
+Then $f$ is monotonic. 
+
+If in addition $f$ is light then it is a homeomorphism.
+\end{thm}
+
+In other words, the theorem states that monotonicity as an approprate generalization of univalentness which works for saddle maps.
+
+Note that any disc with $\CAT[0]$ metric satisfies the assumption in particular the it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau};
+the surfaces described in \cite{jost} also partial case of metrics $(\DD,|{*}-{*}|)$.
+
+\section{Energy minimizing maps are saddle}
+
+Recall that harmonic map $f\:M\to N$ between Riemannian manifolds are defined as local energy minimizer among the maps with fixad values on the boundary.
+Here the energy is defined as 
+\[E(f)=\int_M|df|^2,\]
+where $df\:\T M\to \T N$ is the differential of $f$.
+
+\begin{thm}{Proposition} 
+Assume $(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\DD$ are jointed by unique geodesic $[x,y]$.
+Then any energy minimizing harmonic map $f\:\DD\to(\DD,|{*}-{*}|)$ is saddle.
+\end{thm}
+
+\parit{Proof.}
+Assume contrary, that is for some geodesic $[x,y]$ in $(\DD,d)$ the complement $\DD\backslash f^{-1}[x,y]$ has a component $\Omega$ which does not meet the boundary $\partial\DD$.
+
+Let $\gamma(t)$ be the unit speed parametrization of the geodesic $[x,y]$ from $x$ to $y$.
+Let us redefine the map $f$ in $\Omega$ by setting 
+\[\hat f(z)\left[
+\begin{aligned}
+&\gamma(\min\{\,|x-z|,|y-z|\,\})&&\text{if}&& z\in\Omega,
+\\
+&f(z)&&\text{if}&& z\notin\Omega.
+\end{aligned}
+\right.\]
+Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$ a contradiction.
+\qeds
+
+\section{The proof}
+
+
+
+
+\parit{Proof.}
+Denote by $\hat \DD$ the mapping cylinder  of $\DD$ over the restriction of $f$ to $\SS^1=\partial \DD$;
+that is,
+\[\hat \DD=\DD\bigsqcup_{f|_{\partial \DD}(x)\sim (x,0)} \SS^1\times[0,1].\]
+Since $f|_{\SS^1}\:\SS^1\to\SS^1$ is monotonic,
+the mapping cylinder $\hat \DD$ is homeomorphic to $\DD$;
+this follows from Moore's quotient theorem \cite{moore}, but could be also checked directly.
+
+\begin{wrapfigure}{r}{35 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mapping-cylinder-0(1)}
+\lbl{21,14;$\DD$}
+\lbl{27,8;$\hat\DD$}
+\lbl[br]{11,5;$x$}
+\lbl[br]{28,26;$y$}
+\lbl[t]{14,21,45;$\langle x,y\rangle$}
+\end{lpic}
+\end{wrapfigure}
+
+Consider the mapping cylinder $\check \DD$ of $\DD$ over the boundary;
+$\check \DD$ can be identified with a disc of radius $2$.
+The identity map $\SS^1\times [0,1]$ induce an extension of $f\:\DD\to \DD$ to the map 
+$\hat f\:\check \DD\to \hat \DD$.
+Note that $f$ is monotonic if and only if $\hat f$ is.
+
+Given $u,v\in\SS^1=\partial\DD$, consider three paths $u\times [0,1]$, $v\times[0,1]$ with the geodesic between $f(u)$ and $f(v)$ in $(\DD,|{*}-{*}|)$;
+the concatenation of these paths in $\hat \DD$ as well as any closed arc in this concatenation will be called \emph{test-curve}.
+
+Note that any two points $x$ and $y$ in $\hat \DD$ are joined by a unique test-curve which will be denoted $\langle x,y\rangle$.
+
+By the assumption, each connected component of $\DD\backslash \hat f^{-1}\langle x,y\rangle$ for any test-curve $\langle x,y\rangle$ intersects $\partial \hat \DD$.
+
+Since $\hat f|_{\partial\DD}$ is the identity map.
+Therefore $\hat f\:\check \DD\to \hat \DD$ has degree $1$;
+in particular $f$ is onto.
+
+Assume $\hat f$ is not monotone;
+that is, there is a point $x\in \hat\DD$ such that the inverse image $\hat f^{-1}\{x\}$ is not connected.
+Clearly $x\notin\partial \hat\DD$.
+
+Consider two open subsets $\Theta\subset\check \DD$ and $\Omega\subset \check \DD\times\SS^1$.
+\begin{align*}
+\Theta&=\hat \DD\backslash f^{-1}\{x\},
+\\
+\Omega&=\set{(z,s)\in \hat \DD\times\SS^1}{f(z)\not\in \langle x,h(s)\rangle}.
+\end{align*}
+
+The restriction of the projection $\hat \DD\times\SS^1\to \hat \DD$ sends $\Omega$ to $\Theta$.
+Note that induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
+Indeed, given $z\in \Theta$, we can choose a $s_z\in\SS^1$ such that 
+$f(z)\notin \langle x,s_z\rangle$;
+moreover the function $z\to s_z$ can be chosen to be continuous.
+In particular for any loop $\lambda\:[0,1]\to\Theta$, the loop 
+\[\bar\lambda\:t\mapsto (\lambda(t),s_{\lambda(t)})\]
+is a lift of $\lambda$ in $\Omega\subset \DD\times\SS^1$.
+
+Since $x\notin\partial \hat \DD$, we get $\partial\check \DD\subset \Theta$.
+Since $\{x\}=\langle x\,x\rangle$, every connected component of $\Theta$ have to intersect $\partial\DD$.
+Since $\partial\DD$ is connected so is $\Theta$.
+
+Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a curve in $\Theta$.
+Therefore $\pi_1\Theta$ contains a free group with two generators.
+
+On the other hand, the restriction of the projection $\check\DD\times\SS^1\to \SS^1$ to $\Omega$ has fiber 
+$\Phi_s=\DD\backslash f^{-1}\langle xs\rangle$ at point $s\in\partial \SS^1$.
+Note that $\Phi_s$ is simply connected and therefore the projection $\Omega\to \SS^1$ induce an isomorphism of fundamental groups.
+In particular 
+\[\pi_1\Omega=\ZZ,\]
+a contradiction.
+\qeds
+
+\section{Final remarks}
+
+\parbf{Proofs of baby theorem.}
+Let us present a \emph{fake} of the baby theorem (\ref{baby}) which is based on the idea from the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
+We say where we cheat in the footnote; 
+it is hard (if at all possible) to fix it.
+
+\parit{Fake proof.}
+Note that  $\deg f=1$;
+in particular $f$ is onto.
+It remains to show that $f$ is injective.
+
+Assume  $w=f(x)=f(y)$ for distinct points $x,y\in\DD$
+Note that  $w$ lies in the interior of $\DD$.
+Choose a geodesic $\gamma$ which passes through $w$ and goes 
+from boundary to boundary of $\DD$.
+The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and $b$.
+We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.\footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as psedoarc, where the order points has no sense.}
+
+Note that there is a continuous one parameter family of geodesics $\gamma_t$ passing through $w$ with the ends at $\partial \DD$
+such that $\gamma=\gamma_0$ and $\gamma_1$ is $\gamma$ with reversed parametrization.
+Note that the order of $x$ and $y$ on $p^{-1}(\gamma_t)$ does not change in $t$.
+On the other hand the orders on $\gamma_0$ and on $\gamma_1$ are opposite, a contradiction.\qeds
+
+A correct proof of baby theorem can be build on the theorem of Shefel, but it does not seem possible to generalize.
+
+\parit{Proof.}
+Let us extend the map of the disc by identity map outside the disc. 
+According to Shefel's theorem the induced metric length metric on the plane is $\CAT[0]$.
+This metric coinside with the Euclidean metric outside a compact set therefore the induced intrinsic metric metric is flat and the maps is isometry for this metric, in particular a homeomorphism.\qeds
+
+
+\parbf{Generalization of main theorem.}
+In the proof the condition that $\DD$ is a disc can be relaxed to the following:
+the mapping cylinder of the target space over $f|_{\partial\DD}$ is homeomorphic to a closed disc.
+So the target space might look like the solid figure eight on the right picture.
+
+\begin{center}
+\begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mapping-cylinder(1)}
+\lbl[rb]{41,17;$\xrightarrow{\hat f}$}
+\end{lpic}
+\end{center}
+
+\parbf{On univalentness of harmonic maps.}
+If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to surface with Riemannian metric,
+then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a descrete set of points.
+A proof of this statement was suggested by Alexandre Eremenko.
+
+We do not know if this statement can be generalized to surfaces with $\CAT[0]$ metric; 
+for a definition of harmonic maps with $\CAT[0]$ target see \cite{GS}.
+If yes, then it would imply that if the  map $f$ is harmonic and univalent at the image of $f(\partial\DD)$ then it is injective.
+
+\begin{thebibliography}{52}
+
+\bibitem{A} Alexandrov, A. D. ``Ruled  surfaces  in  metric  spaces,'' Vestnik Leningrad. Univ., 12:5-26, 1957 (Russian).
+
+\bibitem{eremenko} Eremenko, A.,  
+an answer to ``Harmonic maps are light'', MathOverflow
+\texttt{https://mathoverflow.net/q/272047 (version: 2017-06-13)}
+
+\bibitem{akp}
+Alexander, S., Kapovitch, V. and Petrunin, A.,
+``Invitation to Alexandrov geometry: CAT [0] spaces,''
+arXiv:1701.03483.
+
+\bibitem{GS} Gromov, Mikhail, and Richard Schoen. "Harmonic maps into singular spaces and p-adic superrigidity for lattices in groups of rank one." Publications Mathématiques de l'IHÉS 76.1 (1992): 165-246.
+
+\bibitem{H} Hamilton, R. S. ``Harmonic Maps of Manifolds with Boundary,'' Lecture Notes in Mathematics, Springer, 1975, ISBN 978-3-540-37530-2.
+
+\bibitem{jost} Jost, J.
+Univalency of harmonic mappings between surfaces.
+J. Reine Angew. Math. 324 (1981), 141--153. 
+
+\bibitem{moore}
+Moore, R. L.,
+``Concerning upper semi-continuous collections of continua,''
+Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
+
+\bibitem{petrunin-orthodox} Petrunin, A. 
+``Exercises in Orthodox Geometry''
+{\tt arXiv:0906.0290 [math.HO]}
+
+\bibitem{shefel-2D} 
+\begin{otherlanguage}{russian}
+Шефель, С. З.,
+\textit{О седловых поверхностях ограниченной спрямляемой кривой.}
+Доклады АН СССР, 162 (1965) №2, 
+294---296.
+\end{otherlanguage}
+%\v{S}efel', S.,
+%\textit{On saddle surfaces bounded by a rectifiable curve,} 
+%Dokl. Akad. Nauk SSSR 
+%162 
+%(1965), 
+%294--296.
+
+\bibitem{shefel-3D} 
+\begin{otherlanguage}{russian}
+Шефель, С. З., 
+\textit{О внутренней геометрии седловых поверхностей.}
+Сибирский математический журнал, 5 (1964), 1382---1396
+\end{otherlanguage}
+%\v{S}efel', S., 
+%\textit{On the intrinsic geometry of saddle surfaces,} Sibirsk. Mat. \v{Z}. 
+%5 
+%(1964), 
+%1382--1396
+
+\bibitem{schoen-yau} Schoen, Richard; Yau, Shing Tung
+On univalent harmonic maps between surfaces.
+Invent. Math. 44 (1978), no. 3, 265--278. 
+
+\bibitem{St} Stadler, S. ``Harmonic discs in CAT(0) spaces'', in preparation.
+
+%\bibitem{W1}Whyburn, G. T., ``On sequences and limiting sets,'' Fund. Math. vol. 25 (1935) pp. 408-426.
+
+%\bibitem{W2}Whyburn, G. T., ``Analytic topology,'' Amer. Math. Soc. Colloquium Publications, vol. 28, 1942.
+
+%\bibitem{Wi}Wilder, R. L., ``Topology of Manifolds,'' American Mathematical Society Colloquium Publications, vol. 32. American Mathematical
+%Society, New York, N. Y., 1949.
+\end{thebibliography}
+
+\end{document}
