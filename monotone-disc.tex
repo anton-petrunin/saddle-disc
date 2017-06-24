@@ -77,7 +77,6 @@ To prove the corollary one has to project $\Sigma$ to $(x,y)$-plane and apply th
 This corollary is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
 Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
 
-
 \section{Energy minimizing maps are saddle}
 
 Recall that harmonic map $f\:M\to N$ between Riemannian manifolds are defined as local energy minimizer among the maps with fixad values on the boundary.
@@ -149,35 +148,41 @@ Assume $\hat f$ is not monotone;
 that is, there is a point $x\in \hat\DD$ such that the inverse image $\hat f^{-1}\{x\}$ is not connected.
 Clearly $x\notin\partial \hat\DD$.
 
-Consider two open subsets $\Theta\subset\check \DD$ and $\Omega\subset \check \DD\times\SS^1$.
+Note that there are two monotonic maps $\alpha,\beta\:\SS^1\to \partial\hat\DD$ such that the test curve
+$\langle \alpha(s),\beta(s) \rangle$ pass thru $x$ for any $s\in\SS^1=\RR/\ZZ$.
+
+Denote by $\Psi_s$ the open set on the right side from  $\langle \alpha(s),\beta(s) \rangle$.
+Set $\Phi_s\zz=\hat f^{-1}\Psi_s$.
+
+Consider the two open subsets $\Theta\subset\check \DD$ and $\Omega\subset \check \DD\times\SS^1$:
 \begin{align*}
 \Theta&=\hat \DD\backslash f^{-1}\{x\},
 \\
-\Omega&=\set{(z,s)\in \hat \DD\times\SS^1}{f(z)\not\in \langle x,h(s)\rangle}.
+\Omega&=\set{(z,s)\in \hat \DD\times\SS^1}{z\in \Phi_s}.
 \end{align*}
 
-The restriction of the projection $\hat \DD\times\SS^1\to \hat \DD$ sends $\Omega$ to $\Theta$.
-Note that induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
+The  projection $\hat \DD\times\SS^1\to \hat \DD$ sends $\Omega$ to $\Theta$.
+Note that induced homomorphism $\mathfrak{h}\:\pi_1\Omega\to \pi_1\Theta$ is onto.
 Indeed, given $z\in \Theta$, we can choose a $s_z\in\SS^1$ such that 
-$f(z)\notin \langle x,s_z\rangle$;
+$f(z)\in \Psi_s$;
 moreover the function $z\to s_z$ can be chosen to be continuous.
 In particular for any loop $\lambda\:[0,1]\to\Theta$, the loop 
 \[\bar\lambda\:t\mapsto (\lambda(t),s_{\lambda(t)})\]
 is a lift of $\lambda$ in $\Omega\subset \DD\times\SS^1$.
 
 Since $x\notin\partial \hat \DD$, we get $\partial\check \DD\subset \Theta$.
-Since $\{x\}=\langle x\,x\rangle$, every connected component of $\Theta$ have to intersect $\partial\DD$.
+Since $\{x\}=\langle x,x\rangle$, every connected component of $\Theta$ have to intersect $\partial\DD$.
 Since $\partial\DD$ is connected so is $\Theta$.
 
 Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a curve in $\Theta$.
-Therefore $\pi_1\Theta$ contains a free group with two generators.
+It follows that $\pi_1\Theta$ contains a free group with two generators and therefore 
+the same holds for $\Im\mathfrak{h}$.
 
-On the other hand, the restriction of the projection $\check\DD\times\SS^1\to \SS^1$ to $\Omega$ has fiber 
-$\Phi_s=\DD\backslash f^{-1}\langle xs\rangle$ at point $s\in\partial \SS^1$.
-Note that $\Phi_s$ is simply connected and therefore the projection $\Omega\to \SS^1$ induce an isomorphism of fundamental groups.
-In particular 
-\[\pi_1\Omega=\ZZ,\]
-a contradiction.
+On the other hand, the restriction of the projection $\check\DD\times\SS^1\to \SS^1$ to $\Omega$ has fiber the $\Phi_s$ at point $s\in\partial \SS^1$.
+Denote by $\mathfrac{i}\:\pi_1\Phi_s\to \pi_1\Omega$ the homomorphism induced by inclusion.
+Note that $\mathfrac{h}\circ\mathfrac{i}=0$.
+It follows that $\Im\mathfrak{h}$ is cyclic group, ginerated by the image of section over $\SS^1\to \Omega$ of the first projection.
+The latter leads to a contradiction.
 \qeds
 
 \section{Final remarks}
