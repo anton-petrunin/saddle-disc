@@ -50,9 +50,9 @@ It is easy to see that this definition agrees with the one given above.
 A continuous  $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
 Note that according to the definition any monotonic map is onto.
 
-\begin{thm}{Main theorem}
-Let $(\DD,|{*}-{*}|)$ be a closed disc equipped with a metric $|{*}-{*}|$ such that any two points are joined by a unique geodesic and it depends continuously on the end points.
-Assume $f\:\DD\to (\DD,|{*}-{*}|)$ is a saddle map and the restriction of $f$ to the boundary $\partial\DD$ is a monotonic map $\partial\DD\to  \partial\DD$.
+\begin{thm}{Main theorem}\label{thm:main}
+Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric such that any two points are joined by a unique geodesic and it depends continuously on the end points.
+Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotonic map $\partial\DD\to  \partial\Delta$.
 Then $f$ is monotonic. 
 
 If in addition $f$ is light then it is a homeomorphism.
@@ -60,8 +60,9 @@ If in addition $f$ is light then it is a homeomorphism.
 
 In other words, the theorem states that monotonicity as an approprate generalization of univalentness which works for saddle maps.
 
-Note that any disc with $\CAT[0]$ metric satisfies the assumption in particular the it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau};
-the surfaces described in \cite{jost} also partial case of metrics $(\DD,|{*}-{*}|)$.
+Note that any disc with $\CAT[0]$ metric satisfies the assumption for $\Delta$.
+In particular the it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}.
+The surfaces described in \cite{jost} also partial case of these spaces.
 
 \begin{thm}{Corollary}
 by Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
@@ -104,86 +105,82 @@ Let us redefine the map $f$ in $\Omega$ by setting
 Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$ a contradiction.
 \qeds
 
-\section{The proof}
 
+\section{Proofs}
 
+\begin{thm}{Claim}\label{claim}
+Let $f\:\DD\to \Delta$ be as in the main theorem.
+Then for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects $\partial\DD$.
+\end{thm}
 
+\parit{Proof.}???\qeds
 
-\parit{Proof.}
-Denote by $\hat \DD$ the mapping cylinder  of $\DD$ over the restriction of $f$ to $\SS^1=\partial \DD$;
-that is,
-\[\hat \DD=\DD\bigsqcup_{f|_{\partial \DD}(x)\sim (x,0)} \SS^1\times[0,1].\]
-Since $f|_{\SS^1}\:\SS^1\to\SS^1$ is monotonic,
-the mapping cylinder $\hat \DD$ is homeomorphic to $\DD$;
-this follows from Moore's quotient theorem \cite{moore}, but could be also checked directly.
-
-\begin{wrapfigure}{r}{35 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mapping-cylinder-0(1)}
-\lbl{21,14;$\DD$}
-\lbl{27,8;$\hat\DD$}
-\lbl[br]{11,5;$x$}
-\lbl[br]{28,26;$y$}
-\lbl[t]{14,21,45;$\langle x,y\rangle$}
-\end{lpic}
-\end{wrapfigure}
-
-Consider the mapping cylinder $\check \DD$ of $\DD$ over the boundary;
-$\check \DD$ can be identified with a disc of radius $2$.
-The identity map $\SS^1\times [0,1]$ induce an extension of $f\:\DD\to \DD$ to the map 
-$\hat f\:\check \DD\to \hat \DD$.
-Note that $f$ is monotonic if and only if $\hat f$ is.
-
-Given $u,v\in\SS^1=\partial\DD$, consider three paths $u\times [0,1]$, $v\times[0,1]$ with the geodesic between $f(u)$ and $f(v)$ in $(\DD,|{*}-{*}|)$;
-the concatenation of these paths in $\hat \DD$ as well as any closed arc in this concatenation will be called \emph{test-curve}.
-
-Note that any two points $x$ and $y$ in $\hat \DD$ are joined by a unique test-curve which will be denoted $\langle x,y\rangle$.
-
-By the assumption, each connected component of $\DD\backslash \hat f^{-1}\langle x,y\rangle$ for any test-curve $\langle x,y\rangle$ intersects $\partial \hat \DD$.
-
-Since $\hat f|_{\partial\DD}$ is the identity map.
-Therefore $\hat f\:\check \DD\to \hat \DD$ has degree $1$;
+\parit{Proof of the main theorem.}
+Since $f|_{\partial\DD}\:\partial\DD \to\partial \Delta$ is monotonic, it has degree $\pm1$.
+We can assume that the orientations on $\DD$ and $\Delta$ are chosen so that $\deg f|_{\partial\DD}=1$
+and therefore $\deg f=1$;
 in particular $f$ is onto.
 
-Assume $\hat f$ is not monotone;
-that is, there is a point $x\in \hat\DD$ such that the inverse image $\hat f^{-1}\{x\}$ is not connected.
-Clearly $x\notin\partial \hat\DD$.
+Assume $f$ is not monotone;
+that is, there is a point $x\in \DD$ such that the inverse image $f^{-1}\{x\}$ is not connected.
 
-Note that there are two monotonic maps $\alpha,\beta\:\SS^1\to \partial\hat\DD$ such that the test curve
-$\langle \alpha(s),\beta(s) \rangle$ pass thru $x$ for any $s\in\SS^1=\RR/\ZZ$.
+Given $s\in\partial \Delta$ consider the open set
+\[\Phi_s=\set{y\in\Delta}{\measuredangle [x\,^y_s]<\tfrac\pi2}.\]
+Note that $\Phi_s$ and its complement are convex in $\Delta$.
+In particular $\partial_\Delta\Phi_s$ is a geodesic.
 
-Denote by $\Psi_s$ the open set on the right side from  $\langle \alpha(s),\beta(s) \rangle$.
-Set $\Phi_s\zz=\hat f^{-1}\Psi_s$.
-
-Consider the two open subsets $\Theta\subset\check \DD$ and $\Omega\subset \check \DD\times\SS^1$:
+Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\SS^1$ defined as
 \begin{align*}
-\Theta&=\hat \DD\backslash f^{-1}\{x\},
+\Theta&=\DD\backslash f^{-1}\{x\},
 \\
-\Omega&=\set{(z,s)\in \hat \DD\times\SS^1}{z\in \Phi_s}.
+\Omega&=\set{(z,s)\in \DD\times\SS^1}{f(z)\in \Phi_s}.
 \end{align*}
 
-The  projection $\hat \DD\times\SS^1\to \hat \DD$ sends $\Omega$ to $\Theta$.
-Note that induced homomorphism $\mathfrak{h}\:\pi_1\Omega\to \pi_1\Theta$ is onto.
-Indeed, given $z\in \Theta$, we can choose a $s_z\in\SS^1$ such that 
-$f(z)\in \Psi_s$;
-moreover the function $z\to s_z$ can be chosen to be continuous.
-In particular for any loop $\lambda\:[0,1]\to\Theta$, the loop 
-\[\bar\lambda\:t\mapsto (\lambda(t),s_{\lambda(t)})\]
-is a lift of $\lambda$ in $\Omega\subset \DD\times\SS^1$.
+The  projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
+Note that induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
+Indeed, since $f|_{\partial\DD}$ is monotonic, any loop $\alpha$ in $\Theta$ can be reparametrized so that there is a curve $\beta\:[0,1]\to \partial\DD=\SS^1$ such that 
+$f\circ\alpha(t)$ lies on the geodesic $[x,f\circ\beta(t)]$ in $\Delta$.
+Then $\tilde\alpha(t)=(\alpha(t),\beta(t))$ is a lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
 
-Since $x\notin\partial \hat \DD$, we get $\partial\check \DD\subset \Theta$.
-Since $\{x\}=\langle x,x\rangle$, every connected component of $\Theta$ have to intersect $\partial\DD$.
-Since $\partial\DD$ is connected so is $\Theta$.
+Since $\{x\}$ is convex, by the claim \ref{claim}, every connected component of $\Theta$ have to intersect $\partial\DD$.
+Note that $\Theta\cap \partial\DD$ is connected;
+indeed if $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$
+and if $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotonic, $\Theta\cap \partial\DD$ is an open arc.
+It follows that $\Theta$ is connected as well.
+
+
+Consider the restriction of the projection $\DD\times\SS^1\to \SS^1$ to $\Omega$;
+it has fiber $\Psi_s=f^{-1}\Phi_s$ at point $s\in\SS^1$.
+Let us show that for any $s$ the set $\Psi_s$ is empty or simply connected.
+
+Fix $s\in\SS^1$; assume $\Psi_s\ne \emptyset$.
+Since $\Psi_s$ is a complement of a closed convex set,
+each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
+Since $f$ is monotonic, $\sigma_s$ is an open arc in $\SS^1$.
+In particular $\sigma_s$ is connected and therefore so is $\Psi_s$.
+
+Choose a simple closed curve $\gamma\:\SS^1\to\Psi_s$;
+denote by $\Gamma$ the disc bounded by $\gamma$.
+By the claim \ref{claim}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
+Since $\Phi_s$ is convex,  $K\subset \Phi_s$.
+It follows that $\Gamma\subset\Psi_s$ and therefore $\gamma$ is contractible in $\Psi_s$.
+Since $\gamma$ is arbitrary, $\Psi_s$ is simply connected.
+
+Note that $\Phi_s=\emptyset\iff f(s)=x$.
+\begin{itemize}
+\item If $x\notin\partial\DD$ then from above $\Phi_s$ is simply connected for any $s$.
+Therefore the projection $\Omega\to \SS^1$ induce an isomorphism of fundamental groups; that is $\pi_1\Omega=\ZZ$.
+\item If $x\in\partial\DD$ then by a similar reason, we have $\pi_1\Omega=0$.
+\end{itemize}
+
+
 
 Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a curve in $\Theta$.
-It follows that $\pi_1\Theta$ contains a free group with two generators and therefore 
-the same holds for $\Im\mathfrak{h}$.
+\begin{itemize}
+\item If $x\notin\partial \DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain a free group with two generators, a contradicition.
+\item If $x\in\partial\DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain $\ZZ$ as a subgroup, a contradicition again.\qeds
+\end{itemize}
 
-On the other hand, the restriction of the projection $\check\DD\times\SS^1\to \SS^1$ to $\Omega$ has fiber the $\Phi_s$ at point $s\in\partial \SS^1$.
-Denote by $\mathfrac{i}\:\pi_1\Phi_s\to \pi_1\Omega$ the homomorphism induced by inclusion.
-Note that $\mathfrac{h}\circ\mathfrac{i}=0$.
-It follows that $\Im\mathfrak{h}$ is cyclic group, ginerated by the image of section over $\SS^1\to \Omega$ of the first projection.
-The latter leads to a contradiction.
-\qeds
 
 \section{Final remarks}
 
