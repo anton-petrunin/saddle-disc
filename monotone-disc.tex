@@ -110,10 +110,32 @@ Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$ 
 
 \begin{thm}{Claim}\label{claim}
 Let $f\:\DD\to \Delta$ be as in the main theorem.
-Then for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects $\partial\DD$.
+Then 
+\begin{enumerate}[(i)]
+\item for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects $\partial\DD$.
+\item for any open convex set $\Phi\subset\Delta$ each connected component of $f^{-1}\Phi$ is simply connected.
+\end{enumerate}
 \end{thm}
 
-\parit{Proof.}???\qeds
+\parit{Proof; (i)} 
+Note that 
+\[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma,\]
+where $\Sigma_K$ is a set of geodesics which goes from boundary to boundary in $\Delta$
+and $H_\gamma$ is a set of points on one left side from $\gamma$.
+The statement follows since $K$ is convex and closed and $\Delta$ is homeomorphic to the disc.
+
+By the definition of saddle map, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary $\partial \DD$.
+Therefore the same holds for 
+\[\DD\backslash f^{-1}K=\bigcup_{\gamma\in\Sigma_K}(\DD\backslash f^{-1}H_\gamma).\]
+
+\parit{(ii)}
+Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}(\Phi)$;
+denote by $\Gamma$ the disc bounded by $\gamma$.
+By the \textit{(i)}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
+Since $\Phi$ is convex,  $K\subset \Phi$.
+It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in $\Psi$.
+Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
+\qeds
 
 \parit{Proof of the main theorem.}
 Since $f|_{\partial\DD}\:\partial\DD \to\partial \Delta$ is monotonic, it has degree $\pm1$.
@@ -127,6 +149,7 @@ that is, there is a point $x\in \DD$ such that the inverse image $f^{-1}\{x\}$ i
 Given $s\in\partial \Delta$ consider the open set
 \[\Phi_s=\set{y\in\Delta}{\measuredangle [x\,^y_s]<\tfrac\pi2}.\]
 Note that $\Phi_s$ and its complement are convex in $\Delta$.
+(Here we use that $\Delta$ is homeomorphic to a disc.)
 In particular $\partial_\Delta\Phi_s$ is a geodesic.
 
 Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\SS^1$ defined as
@@ -142,7 +165,7 @@ Indeed, since $f|_{\partial\DD}$ is monotonic, any loop $\alpha$ in $\Theta$ can
 $f\circ\alpha(t)$ lies on the geodesic $[x,f\circ\beta(t)]$ in $\Delta$.
 Then $\tilde\alpha(t)=(\alpha(t),\beta(t))$ is a lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
 
-Since $\{x\}$ is convex, by the claim \ref{claim}, every connected component of $\Theta$ have to intersect $\partial\DD$.
+Since $\{x\}$ is convex, by the claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ have to intersect $\partial\DD$.
 Note that $\Theta\cap \partial\DD$ is connected;
 indeed if $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$
 and if $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotonic, $\Theta\cap \partial\DD$ is an open arc.
@@ -158,13 +181,7 @@ Since $\Psi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
 Since $f$ is monotonic, $\sigma_s$ is an open arc in $\SS^1$.
 In particular $\sigma_s$ is connected and therefore so is $\Psi_s$.
-
-Choose a simple closed curve $\gamma\:\SS^1\to\Psi_s$;
-denote by $\Gamma$ the disc bounded by $\gamma$.
-By the claim \ref{claim}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
-Since $\Phi_s$ is convex,  $K\subset \Phi_s$.
-It follows that $\Gamma\subset\Psi_s$ and therefore $\gamma$ is contractible in $\Psi_s$.
-Since $\gamma$ is arbitrary, $\Psi_s$ is simply connected.
+By the claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
 \begin{itemize}
