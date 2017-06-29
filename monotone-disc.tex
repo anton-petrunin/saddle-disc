@@ -17,20 +17,21 @@
 \maketitle
 
 \begin{abstract}
-We prove an analog of the univalentness theorem for saddle maps from disc to disc.
+We prove an analog of Schoen and Yau's univalentness theorem for saddle maps between discs.
 \end{abstract}
 
 \section{Introduction}
 
-A map from a closed disc $\DD$ to a Euclidean space is called saddle if for any hypeplane $\Pi$ each connected component of the complement $\DD\backslash f^{-1}\Pi$ intersects the boundary $\partial \DD$.
-Ruled surfaces and the harmonic maps provide examples of such maps.
+A map from a closed disc $\DD$ to a Euclidean space is called saddle if for any hyperplane $\Pi$ each connected component of the 
+complement $\DD\backslash f^{-1}\Pi$ intersects the boundary $\partial \DD$.
+Ruled surfaces and harmonic maps provide examples of such maps.
 
 In this note we prove a synthetic analog of the univalentness theorem for saddle maps from disc to disc.
 The original theorem is formulated for harmonic maps and  surfaces with nonpositive curvature.
 It was proved by Richard Schoen and Shing Tung Yau \cite{schoen-yau};
 an interesting generalization was obtained by J\"urgen Jost \cite{jost}.
 An extensive study of general saddle maps was given by Samuil Shefel \cite{shefel-2D} and \cite{shefel-3D};
-his work was inspired by a note of Alexander Alexandrov \cite{A} on intrinsic metric of general ruled surface.
+his work was inspired by a note of Alexander Alexandrov \cite{A} on the intrinsic metric of a general ruled surface.
 Part of the work of Samuil Shefel is described in a chapter of \cite{akp}.
 
 A continuous map $f\:X\to Y$ is called \emph{light} if the inverse image of any point $y\in Y$ is totally disconnected.
@@ -42,56 +43,63 @@ the restriction $f|_{\partial\DD}$ is the identity map.
 Then $f$ is a homeomorphism.
 \end{thm}
 
-The proof of the baby theorem is as hard as the proof of the main theorem formulated below --- read the final remarks if it looks trivial for you.
+The proof of the baby theorem is as hard as the proof of the main theorem formulated below --- 
+read the final remarks if it looks trivial to you.
 
-A map $f$ from a closed disc $\DD$ to a surface $\Delta$ with geodesic metric is called saddle if for any geodesic $[x,y]$ each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
+A map $f$ from a closed disc $\DD$ to a surface $\Delta$ with a geodesic metric is called \emph{saddle} 
+if for any geodesic $[x,y]$ each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
 It is easy to see that this definition agrees with the one given above.
 
 A continuous  $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
 Note that according to the definition any monotonic map is onto.
 
 \begin{thm}{Main theorem}\label{thm:main}
-Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric such that any two points are joined by a unique geodesic and it depends continuously on the end points.
-Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotonic map $\partial\DD\to  \partial\Delta$.
+Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
+such that any two points are joined by a unique geodesic and it depends continuously on the end points.
+Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotonic map 
+$\partial\DD\to  \partial\Delta$.
 Then $f$ is monotonic. 
 
 If in addition $f$ is light then it is a homeomorphism.
 \end{thm}
 
-In other words, the theorem states that monotonicity as an approprate generalization of univalentness which works for saddle maps.
+In other words, the theorem states that monotonicity is an appropriate generalization of univalentness which works for saddle maps.
 
 Note that any disc with $\CAT[0]$ metric satisfies the assumption for $\Delta$.
-In particular the it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}.
-The surfaces described in \cite{jost} also partial case of these spaces.
+In particular, it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}.
+The surfaces described in \cite{jost} are also partial case of these spaces.
 
 \begin{thm}{Corollary}
-by Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
-Assume that orthogonal projection to $(x,y)$-plane
+Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
+Assume that the orthogonal projection to the $(x,y)$-plane
 maps the boundary of $\Sigma$
-injectively to convex closed curve.
-Then the orthogonal projection to $(x,y)$-plane is injective on whole $\Sigma$.
+injectively to a convex closed curve.
+Then the orthogonal projection to the $(x,y)$-plane is injective on all of $\Sigma$.
 
 In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
 \end{thm}
 
-To prove the corollary one has to project $\Sigma$ to $(x,y)$-plane and apply the main theorem.
+To prove the corollary one has to project $\Sigma$ to the $(x,y)$-plane and apply the main theorem.
 This corollary is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
-Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
+Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
+intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
 
 \section{Energy minimizing maps are saddle}
 
-Recall that harmonic map $f\:M\to N$ between Riemannian manifolds are defined as local energy minimizer among the maps with fixad values on the boundary.
+Recall that harmonic maps $f\:M\to N$ between Riemannian manifolds are defined as local energy minimizers 
+among maps with fixed values on the boundary.
 Here the energy is defined as 
 \[E(f)=\int_M|df|^2,\]
 where $df\:\T M\to \T N$ is the differential of $f$.
 
 \begin{thm}{Proposition} 
-Assume $(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\DD$ are jointed by unique geodesic $[x,y]$.
+Assume $(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\DD$ are joined by unique geodesic $[x,y]$.
 Then any energy minimizing harmonic map $f\:\DD\to(\DD,|{*}-{*}|)$ is saddle.
 \end{thm}
 
 \parit{Proof.}
-Assume contrary, that is for some geodesic $[x,y]$ in $(\DD,d)$ the complement $\DD\backslash f^{-1}[x,y]$ has a component $\Omega$ which does not meet the boundary $\partial\DD$.
+Assume contrary, that is for some geodesic $[x,y]$ in $(\DD,d)$ the complement $\DD\backslash f^{-1}[x,y]$ has a component 
+$\Omega$ which does not meet the boundary $\partial\DD$.
 
 Let $\gamma(t)$ be the unit speed parametrization of the geodesic $[x,y]$ from $x$ to $y$.
 Let us redefine the map $f$ in $\Omega$ by setting 
@@ -102,7 +110,7 @@ Let us redefine the map $f$ in $\Omega$ by setting
 &f(z)&&\text{if}&& z\notin\Omega.
 \end{aligned}
 \right.\]
-Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$ a contradiction.
+Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$, a contradiction.
 \qeds
 
 
@@ -118,20 +126,21 @@ Then
 \end{thm}
 
 \parit{Proof; (i)} 
-Note that 
-\[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma,\]
-where $\Sigma_K$ is a set of geodesics which goes from boundary to boundary in $\Delta$
-and $H_\gamma$ is a set of points on one left side from $\gamma$.
-The statement follows since $K$ is convex and closed and $\Delta$ is homeomorphic to the disc.
+Let $\gamma$ be a geodesic in $\Delta$, disjoint from $K$ and with endpoints on $\partial\Delta$.
+Let $\Sigma_K$ be the set of all such geodesics.
+ For each geodesic in $\Sigma_K$ we define
+$H_\gamma$ to be the component of $\Delta\backslash\gamma$ which contains $K$. Then
+\[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma\]
+since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc.
 
-By the definition of saddle map, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary $\partial \DD$.
+By definition of saddle maps, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary $\partial \DD$.
 Therefore the same holds for 
 \[\DD\backslash f^{-1}K=\bigcup_{\gamma\in\Sigma_K}(\DD\backslash f^{-1}H_\gamma).\]
 
 \parit{(ii)}
 Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}(\Phi)$;
 denote by $\Gamma$ the disc bounded by $\gamma$.
-By the \textit{(i)}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
+By \textit{(i)}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
 Since $\Phi$ is convex,  $K\subset \Phi$.
 It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in $\Psi$.
 Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
@@ -160,12 +169,12 @@ Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\
 \end{align*}
 
 The  projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
-Note that induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
+Note that the induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
 Indeed, since $f|_{\partial\DD}$ is monotonic, any loop $\alpha$ in $\Theta$ can be reparametrized so that there is a curve $\beta\:[0,1]\to \partial\DD=\SS^1$ such that 
 $f\circ\alpha(t)$ lies on the geodesic $[x,f\circ\beta(t)]$ in $\Delta$.
 Then $\tilde\alpha(t)=(\alpha(t),\beta(t))$ is a lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
 
-Since $\{x\}$ is convex, by the claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ have to intersect $\partial\DD$.
+Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ has to intersect $\partial\DD$.
 Note that $\Theta\cap \partial\DD$ is connected;
 indeed if $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$
 and if $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotonic, $\Theta\cap \partial\DD$ is an open arc.
@@ -173,20 +182,20 @@ It follows that $\Theta$ is connected as well.
 
 
 Consider the restriction of the projection $\DD\times\SS^1\to \SS^1$ to $\Omega$;
-it has fiber $\Psi_s=f^{-1}\Phi_s$ at point $s\in\SS^1$.
-Let us show that for any $s$ the set $\Psi_s$ is empty or simply connected.
+it has fiber $\Psi_s=f^{-1}\Phi_s$ at the point $s\in\SS^1$.
+Let us show that for any $s$ the set $\Psi_s$ is either empty or simply connected.
 
 Fix $s\in\SS^1$; assume $\Psi_s\ne \emptyset$.
 Since $\Psi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
 Since $f$ is monotonic, $\sigma_s$ is an open arc in $\SS^1$.
 In particular $\sigma_s$ is connected and therefore so is $\Psi_s$.
-By the claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
+By Claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
 \begin{itemize}
 \item If $x\notin\partial\DD$ then from above $\Phi_s$ is simply connected for any $s$.
-Therefore the projection $\Omega\to \SS^1$ induce an isomorphism of fundamental groups; that is $\pi_1\Omega=\ZZ$.
+Therefore the projection $\Omega\to \SS^1$ induces an isomorphism of fundamental groups; that is $\pi_1\Omega=\ZZ$.
 \item If $x\in\partial\DD$ then by a similar reason, we have $\pi_1\Omega=0$.
 \end{itemize}
 
@@ -202,7 +211,8 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 \section{Final remarks}
 
 \parbf{Proofs of baby theorem.}
-Let us present a \emph{fake} of the baby theorem (\ref{baby}) which is based on the idea from the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
+Let us present a \emph{fake} proof of the baby theorem (\ref{baby}) which is based on the idea from the problem ``Saddle surface'' 
+in \cite{petrunin-orthodox}.
 We say where we cheat in the footnote; 
 it is hard (if at all possible) to fix it.
 
@@ -216,19 +226,22 @@ Note that  $w$ lies in the interior of $\DD$.
 Choose a geodesic $\gamma$ which passes through $w$ and goes 
 from boundary to boundary of $\DD$.
 The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and $b$.
-We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.\footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as psedoarc, where the order points has no sense.}
+We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.
+\footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as a pseudoarc, 
+where the order of points has no sense.}
 
 Note that there is a continuous one parameter family of geodesics $\gamma_t$ passing through $w$ with the ends at $\partial \DD$
 such that $\gamma=\gamma_0$ and $\gamma_1$ is $\gamma$ with reversed parametrization.
 Note that the order of $x$ and $y$ on $p^{-1}(\gamma_t)$ does not change in $t$.
-On the other hand the orders on $\gamma_0$ and on $\gamma_1$ are opposite, a contradiction.\qeds
+On the other hand the orders on $\gamma_0$ and $\gamma_1$ are opposite, a contradiction.\qeds
 
-A correct proof of baby theorem can be build on the theorem of Shefel, but it does not seem possible to generalize.
+A correct proof of the baby theorem can be build on the theorem of Shefel, but it does not seem possible to generalize.
 
 \parit{Proof.}
-Let us extend the map of the disc by identity map outside the disc. 
-According to Shefel's theorem the induced metric length metric on the plane is $\CAT[0]$.
-This metric coinside with the Euclidean metric outside a compact set therefore the induced intrinsic metric metric is flat and the maps is isometry for this metric, in particular a homeomorphism.\qeds
+Let us extend the map of the disc by the identity map outside the disc. 
+According to Shefel's theorem the induced length metric on the plane is $\CAT[0]$.
+This metric coincides with the Euclidean metric outside a compact set 
+therefore the induced intrinsic metric metric is flat and the map is isometric for this metric, in particular a homeomorphism.\qeds
 
 
 \parbf{Generalization of main theorem.}
@@ -243,11 +256,11 @@ So the target space might look like the solid figure eight on the right picture.
 \end{center}
 
 \parbf{On univalentness of harmonic maps.}
-If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to surface with Riemannian metric,
-then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a descrete set of points.
+If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a Riemannian metric,
+then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
 A proof of this statement was suggested by Alexandre Eremenko.
 
-We do not know if this statement can be generalized to surfaces with $\CAT[0]$ metric; 
+We do not know if this statement can be generalized to surfaces with $\CAT[0]$ metrics; 
 for a definition of harmonic maps with $\CAT[0]$ target see \cite{GS}.
 If yes, then it would imply that if the  map $f$ is harmonic and univalent at the image of $f(\partial\DD)$ then it is injective.
 
