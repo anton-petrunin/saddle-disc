@@ -259,9 +259,26 @@ If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a R
 then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 
-We do not know if this statement can be generalized to surfaces with $\CAT[0]$ metrics; 
-for a definition of harmonic maps with $\CAT[0]$ target see \cite{GS}.
-If yes, then it would imply that if the  map $f$ is harmonic and univalent at the image of $f(\partial\DD)$ then it is injective.
+The corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
+Surprisingly there even exists a noninjective harmonic map from a closed disc to a $\CAT[0]$ disc
+which restricts to a homeomorphism of boundaries, cf. \cite{Ku} and the example below. Therefore,
+our main theorem is optimal even for harmonic maps.
+
+\parbf{Example.}
+Let $\Sigma$ be a closed surface of genus $g$. Choose a $\CAT[0]$ metric $ds^2$ on $\Sigma$
+which is flat away from a finite number of cone points $C:=\{x_i\}_{i=1}^k$ where $k>4g-4$. 
+Let $u:\Sigma\to (\Sigma,ds^2)$ be the unique harmonic map homotopic to the identity.
+According to Theorem ? in \cite{Ku}, $u$ restricts to a diffeomorphism 
+$\Sigma\backslash u^{-1}C\to \Sigma\backslash u^{-1}C$. Let $\Phi$ be the associated Hopf differential.
+Since $k>4g-4$ there exists a cone point $x\in C$ such that $\Phi\neq 0$ on $u^{-1}(x)$. 
+By Theorem ? in \cite{Ku}, $u^{-1}(x)$ is a simply connected graph in $\Sigma$. Then for $\epsilon>0$
+small enough, $u^{-1} \overline{B_\epsilon(x)}$ is homeomorphic to a closed disc $D$ and $u$ restricts to
+a homeomorphism on $\partial D$. If we precompose $u|_D$ with a Riemann mapping $\rho:\DD\to D$, then
+we obtain a noninjective harmonic map between discs whose restriction to the boundary is a homeomorphism.
+
+%If $\phi$ is a holomorphic differential, then each zero of order $m$ contributes a cone point of angle $(m+2)\pi$
+%Hence by Gauss-Bonnet, the number of zeros is bounded by $4g-4$. 
+
 
 \begin{thebibliography}{52}
 
@@ -283,6 +300,12 @@ arXiv:1701.03483.
 \bibitem{jost} Jost, J.
 Univalency of harmonic mappings between surfaces.
 J. Reine Angew. Math. 324 (1981), 141--153. 
+
+\bibitem{Ku} Kuwert, E.
+Harmonic maps between flat surfaces with conical singularities. 
+Mathematische Zeitschrift 221 (1996), 421--436.
+
+
 
 \bibitem{petrunin-orthodox} Petrunin, A. 
 ``Exercises in Orthodox Geometry''
