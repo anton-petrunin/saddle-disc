@@ -17,7 +17,7 @@
 \maketitle
 
 \begin{abstract}
-We prove an analog of Schoen and Yau's univalentness theorem for saddle maps between discs.
+We prove an analog of Schoen--Yau univalentness theorem for saddle maps between discs.
 \end{abstract}
 
 \section{Introduction}
@@ -43,15 +43,12 @@ the restriction $f|_{\partial\DD}$ is the identity map.
 Then $f$ is a homeomorphism.
 \end{thm}
 
-The proof of the baby theorem is as hard as the proof of the main theorem formulated below --- 
-read the final remarks if it looks trivial to you.
-
 A map $f$ from a closed disc $\DD$ to a surface $\Delta$ with a geodesic metric is called \emph{saddle} 
-if for any geodesic $[x,y]$ each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
+if for any geodesic $[x,y]$ in $\Delta$, each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
 It is easy to see that this definition agrees with the one given above.
 
-A continuous  $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
-Note that according to the definition any monotonic map is onto.
+A continuous map $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
+Since connected space is nonempty by definition, any monotonic map is onto.
 
 \begin{thm}{Main theorem}\label{thm:main}
 Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
@@ -74,15 +71,17 @@ Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
 Assume that the orthogonal projection to the $(x,y)$-plane
 maps the boundary of $\Sigma$
 injectively to a convex closed curve.
-Then the orthogonal projection to the $(x,y)$-plane is injective on all of $\Sigma$.
+Then the orthogonal projection to the $(x,y)$-plane is injective on whole of $\Sigma$.
 
 In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
 \end{thm}
 
 To prove the corollary one has to project $\Sigma$ to the $(x,y)$-plane and apply the main theorem.
+
 This corollary is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
 Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
 intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
+(It is not known whether any saddle surface in the Euclidean space has locally $\CAT[0]$ induced intrinsic metric.)
 
 \section{Energy minimizing maps are saddle}
 
@@ -93,8 +92,8 @@ Here the energy is defined as
 where $df\:\T M\to \T N$ is the differential of $f$.
 
 \begin{thm}{Proposition} 
-Assume $(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\DD$ are joined by unique geodesic $[x,y]$.
-Then any energy minimizing harmonic map $f\:\DD\to(\DD,|{*}-{*}|)$ is saddle.
+Assume $\Delta=(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\Delta$ are joined by unique geodesic $[x,y]$.
+Then any energy minimizing harmonic map $f\:\DD\to\Delta$ is saddle.
 \end{thm}
 
 \parit{Proof.}
@@ -103,7 +102,8 @@ $\Omega$ which does not meet the boundary $\partial\DD$.
 
 Let $\gamma(t)$ be the unit speed parametrization of the geodesic $[x,y]$ from $x$ to $y$.
 Let us redefine the map $f$ in $\Omega$ by setting 
-\[\hat f(z)\left[
+\[\hat f(z)=
+\left[
 \begin{aligned}
 &\gamma(\min\{\,|x-z|,|y-z|\,\})&&\text{if}&& z\in\Omega,
 \\
@@ -134,15 +134,16 @@ $H_\gamma$ to be the component of $\Delta\backslash\gamma$ which contains $K$. T
 since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc.
 
 By definition of saddle maps, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary $\partial \DD$.
-Therefore the same holds for 
+Therefore the same holds for the union
 \[\DD\backslash f^{-1}K=\bigcup_{\gamma\in\Sigma_K}(\DD\backslash f^{-1}H_\gamma).\]
 
 \parit{(ii)}
-Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}(\Phi)$;
+Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}\Phi$;
 denote by $\Gamma$ the disc bounded by $\gamma$.
 By \textit{(i)}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
 Since $\Phi$ is convex,  $K\subset \Phi$.
 It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in $\Psi$.
+
 Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
 \qeds
 
@@ -158,8 +159,8 @@ that is, there is a point $x\in \DD$ such that the inverse image $f^{-1}\{x\}$ i
 Given $s\in\partial \Delta$ consider the open set
 \[\Phi_s=\set{y\in\Delta}{\measuredangle [x\,^y_s]<\tfrac\pi2}.\]
 Note that $\Phi_s$ and its complement are convex in $\Delta$.
-(Here we use that $\Delta$ is homeomorphic to a disc.)
-In particular $\partial_\Delta\Phi_s$ is a geodesic.
+(Here we use that $\Delta$ is homeomorphic to a disc; analogous statement does not hold higher dimensions.)
+In particular, the relative boundary $\partial_\Delta\Phi_s$ is a geodesic.
 
 Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\SS^1$ defined as
 \begin{align*}
@@ -170,27 +171,26 @@ Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\
 
 The  projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
 Note that the induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
-Indeed, since $f|_{\partial\DD}$ is monotonic, any loop $\alpha$ in $\Theta$ can be reparametrized so that there is a curve $\beta\:[0,1]\to \partial\DD=\SS^1$ such that 
-$f\circ\alpha(t)$ lies on the geodesic $[x,f\circ\beta(t)]$ in $\Delta$.
-Then $\tilde\alpha(t)=(\alpha(t),\beta(t))$ is a lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
+For any point $z\in \Theta$ we can choose $s_z\in \SS^1$ such that $f(z)\in \Phi_s$.
+Moreover, since $f|_{\partial\DD}$ is monotonic, the map $z\to s_z$ can be chosen to be continuous.
+It remains to note that for any loop $\alpha$ in $\Theta$, the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is a lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
 
-Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ has to intersect $\partial\DD$.
 Note that $\Theta\cap \partial\DD$ is connected;
 indeed if $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$
 and if $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotonic, $\Theta\cap \partial\DD$ is an open arc.
+Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ has to intersect $\partial\DD$.
 It follows that $\Theta$ is connected as well.
-
 
 Consider the restriction of the projection $\DD\times\SS^1\to \SS^1$ to $\Omega$;
 it has fiber $\Psi_s=f^{-1}\Phi_s$ at the point $s\in\SS^1$.
-Let us show that for any $s$ the set $\Psi_s$ is either empty or simply connected.
+By Claim \ref{claim} the set $\Psi_s$ is either empty or simply connected for any $s$.
 
-Fix $s\in\SS^1$; assume $\Psi_s\ne \emptyset$.
+Indeed, fix $s\in\SS^1$ and assume $\Psi_s\ne \emptyset$.
 Since $\Psi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
 Since $f$ is monotonic, $\sigma_s$ is an open arc in $\SS^1$.
 In particular $\sigma_s$ is connected and therefore so is $\Psi_s$.
-By Claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
+Since $\Phi_s$ is convex open set, by Claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
 \begin{itemize}
@@ -211,8 +211,7 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 \section{Final remarks}
 
 \parbf{Proofs of baby theorem.}
-Let us present a \emph{fake} proof of the baby theorem (\ref{baby}) which is based on the idea from the problem ``Saddle surface'' 
-in \cite{petrunin-orthodox}.
+The presented proof is a tricky fix of the following \emph{fake} proof of the baby theorem (\ref{baby}).
 We say where we cheat in the footnote; 
 it is hard (if at all possible) to fix it.
 
@@ -221,9 +220,9 @@ Note that  $\deg f=1$;
 in particular $f$ is onto.
 It remains to show that $f$ is injective.
 
-Assume  $w=f(x)=f(y)$ for distinct points $x,y\in\DD$
+Assume  $w=f(x)=f(y)$ for distinct points $x,y\in\DD$.
 Note that  $w$ lies in the interior of $\DD$.
-Choose a geodesic $\gamma$ which passes through $w$ and goes 
+Choose a chord $\gamma$ which passes through $w$ and goes 
 from boundary to boundary of $\DD$.
 The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and $b$.
 We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.
@@ -235,7 +234,7 @@ such that $\gamma=\gamma_0$ and $\gamma_1$ is $\gamma$ with reversed parametriza
 Note that the order of $x$ and $y$ on $p^{-1}(\gamma_t)$ does not change in $t$.
 On the other hand the orders on $\gamma_0$ and $\gamma_1$ are opposite, a contradiction.\qeds
 
-A correct proof of the baby theorem can be build on the theorem of Shefel, but it does not seem possible to generalize.
+A correct proof of the baby theorem can be build on the theorem of Shefel (which is a hard theorem) and it does not seem possible to generalize.
 
 \parit{Proof.}
 Let us extend the map of the disc by the identity map outside the disc. 
@@ -258,7 +257,7 @@ So the target space might look like the solid figure eight on the right picture.
 \parbf{On univalentness of harmonic maps.}
 If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a Riemannian metric,
 then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
-A proof of this statement was suggested by Alexandre Eremenko.
+A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 
 We do not know if this statement can be generalized to surfaces with $\CAT[0]$ metrics; 
 for a definition of harmonic maps with $\CAT[0]$ target see \cite{GS}.
@@ -284,11 +283,6 @@ arXiv:1701.03483.
 \bibitem{jost} Jost, J.
 Univalency of harmonic mappings between surfaces.
 J. Reine Angew. Math. 324 (1981), 141--153. 
-
-\bibitem{moore}
-Moore, R. L.,
-``Concerning upper semi-continuous collections of continua,''
-Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
 
 \bibitem{petrunin-orthodox} Petrunin, A. 
 ``Exercises in Orthodox Geometry''
@@ -324,14 +318,6 @@ Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
 On univalent harmonic maps between surfaces.
 Invent. Math. 44 (1978), no. 3, 265--278. 
 
-\bibitem{St} Stadler, S. ``Harmonic discs in CAT(0) spaces'', in preparation.
-
-%\bibitem{W1}Whyburn, G. T., ``On sequences and limiting sets,'' Fund. Math. vol. 25 (1935) pp. 408-426.
-
-%\bibitem{W2}Whyburn, G. T., ``Analytic topology,'' Amer. Math. Soc. Colloquium Publications, vol. 28, 1942.
-
-%\bibitem{Wi}Wilder, R. L., ``Topology of Manifolds,'' American Mathematical Society Colloquium Publications, vol. 32. American Mathematical
-%Society, New York, N. Y., 1949.
 \end{thebibliography}
 
 \end{document}
