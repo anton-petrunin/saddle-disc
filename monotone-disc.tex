@@ -43,37 +43,37 @@ the restriction $f|_{\partial\DD}$ is the identity map.
 Then $f$ is a homeomorphism.
 \end{thm}
 
-A map $f$ from a closed disc $\DD$ to a surface $\Delta$ with a geodesic metric is called \emph{saddle} 
+Let $\Delta$ be a surface with possibly nonempty boundary and geodesic metric.
+A map $f$ from a closed disc $\DD$ to $\Delta$ is called \emph{saddle} 
 if for any geodesic $[x,y]$ in $\Delta$, each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary $\partial\DD$.
 It is easy to see that this definition agrees with the one given above.
 
-A continuous map $f\:X\to Y$ is called \emph{monotonic} if the inverse image of any point $y\in Y$ is connected.
-Since connected space is nonempty by definition, any monotonic map is onto.
+A continuous map $f\:X\to Y$ is called \emph{monotone} if the inverse image of any point $y\in Y$ is connected.
+Since connected space is nonempty by definition, any monotone map is onto.
 
 \begin{thm}{Main theorem}\label{thm:main}
 Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
 such that any two points are joined by a unique geodesic and it depends continuously on the end points.
-Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotonic map 
+Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotone map 
 $\partial\DD\to  \partial\Delta$.
-Then $f$ is monotonic. 
+Then $f$ is monotone. 
 \end{thm}
 
 In other words, the theorem states that monotonicity is an appropriate generalization of univalentness which works for saddle maps.
 
 \parbf{Remarks.}
-
-\begin{itemize}
-\item Note that any disc with $\CAT[0]$ metric satisfies the assumption for $\Delta$.
+ Note that any disc with $\CAT[0]$ metric satisfies the assumption for $\Delta$.
 In particular, it includes the nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}.
 The surfaces described in \cite{jost} are also partial case of these spaces.
-\item For the saddle map $f\:\DD\to \Delta$ in the theorem,
+
+For the saddle map $f\:\DD\to \Delta$ in the theorem,
 one can use the so called \emph{monotone-light factorization} %need a ref to monotone-light factorization
 which is $f=g\circ h$,
 where $g$ is monotone and $h$ is light.
 Moore's quotient theorem \cite{moore} implies that the target of the map $g$ is homeomorphic to the disc $\DD$, so we may think that $g\:\DD\to \DD$ and $h\:\DD\to \Delta$.
 The light map $h$ is saddle and according to the theorem it is monotone.
 The latter implies that $h$ is a homeomorphism.
-\end{itemize}
+
 
 
 
@@ -96,7 +96,7 @@ intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison.
 
 \section{Energy minimizing maps are saddle}
 
-Recall that harmonic maps $f\:M\to N$ between Riemannian manifolds are defined as local energy minimizers 
+Recall that harmonic maps $f\:M\to N$ between Riemannian manifolds can be defined as local energy minimizers 
 among maps with fixed values on the boundary.
 Here the energy is defined as 
 \[E(f)=\int_M|df|^2,\]
@@ -110,6 +110,15 @@ Then any energy minimizing harmonic map $f\:\DD\to\Delta$ with fixed values on t
 \parit{Proof.}
 Assume contrary, that is for some geodesic $[x,y]$ in $\Delta$ the complement $\DD\backslash f^{-1}[x,y]$ has a component 
 $\Omega$ which does not meet the boundary $\partial\DD$.
+
+\begin{wrapfigure}{r}{33 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/cutting-hat(1)}
+\lbl{15,17,51;$f(\Omega)$}
+\lbl[rb]{9,6;$x$}
+\lbl[rb]{25,26;$y$}
+\lbl{23,10;$\Delta$}
+\end{lpic}
+\end{wrapfigure}
 
 Let $\gamma(t)$ be the unit speed parametrization of the geodesic $[x,y]$ from $x$ to $y$.
 Let us redefine the map $f$ in $\Omega$ by setting 
@@ -139,8 +148,9 @@ Then
 \parit{Proof; (i)} 
 Let $\gamma$ be a geodesic in $\Delta$, disjoint from $K$ and with endpoints on $\partial\Delta$.
 Let $\Sigma_K$ be the set of all such geodesics.
- For each geodesic in $\Sigma_K$ we define
-$H_\gamma$ to be the component of $\Delta\backslash\gamma$ which contains $K$. Then
+For each $\gamma\in\Sigma_K$ denote by
+$H_\gamma$ the component of $\Delta\backslash\gamma$ which contains $K$.
+Then
 \[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma\]
 since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc.
 In other words, if $x\notin K$ then there is a geodesic $\gamma$ which separates $K$ from $x$. %MORE???
@@ -152,7 +162,7 @@ Therefore the same holds for the union
 \parit{(ii)}
 Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}\Phi$;
 denote by $\Gamma$ the disc bounded by $\gamma$.
-By \textit{(i)}, $f(\Gamma)$ lies in the convex hull $K\subset \Delta$ of $f(\gamma)$.
+By \textit{(i)}, $f(\Gamma)$ lies in the convex hull of $f(\gamma)$ which will be denoted by $K$.
 Since $\Phi$ is convex,  $K\subset \Phi$.
 It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in $\Psi$.
 
@@ -160,7 +170,7 @@ Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
 \qeds
 
 \parit{Proof of the main theorem.}
-Since $f|_{\partial\DD}\:\partial\DD \to\partial \Delta$ is monotonic, it has degree $\pm1$.
+Since $f|_{\partial\DD}\:\partial\DD \to\partial \Delta$ is monotone, it has degree $\pm1$.
 We can assume that the orientations on $\DD$ and $\Delta$ are chosen so that $\deg f|_{\partial\DD}=1$
 and therefore $\deg f=1$;
 in particular $f$ is onto.
@@ -168,7 +178,7 @@ in particular $f$ is onto.
 Assume $f$ is not monotone;
 that is, there is a point $x\in \DD$ such that the inverse image $f^{-1}\{x\}$ is not connected.
 
-Given $s\in\partial \Delta$ consider the open set
+Given $s\in\partial \Delta$, consider the open set
 \[\Phi_s=\set{y\in\Delta}{\measuredangle [x\,^y_s]<\tfrac\pi2}.\]
 Note that $\Phi_s$ and its complement are convex in $\Delta$.
 (Here we use that $\Delta$ is homeomorphic to a disc; analogous statement does not hold higher dimensions.)
@@ -184,15 +194,15 @@ Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\
 The  projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
 Note that the induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
 Indeed, for any point $z\in \Theta$ there is $s\in \SS^1$ such that $f(z)\in \Phi_s$ or equivalently $\measuredangle [x\,^{f(z)}_s]<\tfrac\pi2$.
-Moreover, since $f|_{\partial\DD}$ is monotonic, the map the set of points $s$ satisfying the above condition is an open arc in $\SS^1$.
+Moreover, since $f|_{\partial\DD}$ is monotone, the set of points $s$ satisfying the above condition is an open arc in $\SS^1$.
 It follows that one can fix a continuous map $z\mapsto s_z$ such that $f(z)\in \Phi_{s_z}$ for any $z\in \Theta$.
-It remains to note that for any loop $\alpha$ in $\Theta$, the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is an $f$-lift of $\alpha$ to $\Omega\subset\DD\times\SS^1$.
+It remains to note that for any loop $\alpha$ in $\Theta$, the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is an $f$-lift of $\alpha$ in $\Omega\subset\DD\times\SS^1$.
 
 Note that $\Theta\cap \partial\DD$ is connected.
 Indeed,
 \begin{itemize}
 \item If $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$. 
-\item If $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotonic, $\Theta\cap \partial\DD$ is an open arc.
+\item If $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotone, $\Theta\cap \partial\DD$ is an open arc.
 \end{itemize}
 Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ has to intersect $\partial\DD$.
 It follows that $\Theta$ is connected as well.
@@ -204,8 +214,8 @@ By Claim \ref{claim} the set $\Psi_s$ is either empty or simply connected for an
 Indeed, fix $s\in\SS^1$ and assume $\Psi_s\ne \emptyset$.
 Since $\Psi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
-Since $f$ is monotonic, $\sigma_s$ is an open arc in $\SS^1$.
-In particular $\sigma_s$ is connected and therefore so is $\Psi_s$.
+Since $f$ is monotone, $\sigma_s$ is an open arc in $\SS^1$.
+In particular $\sigma_s$ is connected and so is $\Psi_s$.
 Since $\Phi_s$ is convex open set, by Claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
@@ -226,10 +236,9 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 
 \section{Final remarks}
 
-\parbf{Proofs of baby theorem.}
+\parbf{On the baby theorem.}
 The presented proof is a tricky fix of the following \emph{fake} proof of the baby theorem (\ref{baby}).
-We say where we cheat in the footnote; 
-it is hard (if at all possible) to fix it.
+We say where we cheat in the footnote.
 
 \parit{Fake proof.}
 Note that  $\deg f=1$;
@@ -256,7 +265,8 @@ A correct proof of the baby theorem can be build on the deep theorem of Shefel \
 Let us extend the map of the disc by the identity map outside the disc. 
 According to Shefel's theorem the induced length metric on the plane is $\CAT[0]$.
 This metric coincides with the Euclidean metric outside a compact set 
-therefore the induced intrinsic metric metric is flat and the map is isometric for this metric, in particular a homeomorphism.\qeds
+therefore the induced intrinsic metric metric is flat and the map is isometric for this metric;
+in particular it is a homeomorphism.\qeds
 
 \begin{wrapfigure}{r}{34 mm}
 \begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mapping-cylinder(1)}
@@ -264,23 +274,25 @@ therefore the induced intrinsic metric metric is flat and the map is isometric f
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Generalization of main theorem.}
+\parbf{A generalization of the main theorem.}
 In the proof the condition that $\DD$ is a disc can be relaxed to the following:
 the mapping cylinder of the target space over $f|_{\partial\DD}$ is homeomorphic to a closed disc.
 So the target space $\Delta$ might look like the solid figure eight on the picture.
 
+Under name \emph{disc retracts}, these type of spaces are used in our paper \cite{petrunin-stadler} on closely related subject. 
+
 
 \parbf{On univalentness of harmonic maps.}
 If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a Riemannian metric,
-then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
+then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points; in particular, $f$ is light.
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 
-The corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
-Surprisingly there even exists a noninjective harmonic map from a closed disc to a $\CAT[0]$ disc
-which restricts to a homeomorphism of boundaries, cf. \cite{Ku} and the example below. Therefore,
-our main theorem is optimal even for harmonic maps.
+As it follows from \cite{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
+Namely, there exists a noninjective harmonic map from a closed disc to a $\CAT[0]$ disc
+which restricts to a homeomorphism of boundaries.
+Therefore, our main theorem is optimal even for harmonic maps.
 
-\parbf{Example.}
+\parit{Example.}
 Let $\Sigma$ be a closed surface of genus $g$. Choose a $\CAT[0]$ metric $ds^2$ on $\Sigma$
 which is flat away from a finite number of cone points $C:=\{x_i\}_{i=1}^k$ where $k>4g-4$. 
 Let $u:\Sigma\to (\Sigma,ds^2)$ be the unique harmonic map homotopic to the identity.
@@ -323,7 +335,7 @@ Moore, R. L.,
 Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
 
 \bibitem{Ku} Kuwert, E.
-Harmonic maps between flat surfaces with conical singularities. 
+\textit{Harmonic maps between flat surfaces with conical singularities.}
 Mathematische Zeitschrift 221 (1996), 421--436.
 
 
@@ -331,6 +343,9 @@ Mathematische Zeitschrift 221 (1996), 421--436.
 \bibitem{petrunin-orthodox} Petrunin, A. 
 ``Exercises in Orthodox Geometry''
 {\tt arXiv:0906.0290 [math.HO]}
+
+\bibitem{petrunin-stadler} Petrunin, A., Stadler, S. \textit{Metric minimzing surfaces revisited}
+in preparation.
 
 \bibitem{shefel-2D} 
 \begin{otherlanguage}{russian}
