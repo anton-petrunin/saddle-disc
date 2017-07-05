@@ -247,14 +247,14 @@ It remains to show that $f$ is injective.
 
 Assume  $w=f(x)=f(y)$ for distinct points $x,y\in\DD$.
 Note that  $w$ lies in the interior of $\DD$.
-Choose a chord $\gamma$ which passes thru $w$ and goes 
+Choose a chord $\gamma$ which passes $w$ and goes 
 from boundary to boundary of $\DD$.
 The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and $b$.
 We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.
 \footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as a pseudoarc, 
 where the order of points has no sense.}
 
-There is a continuous one parameter family of geodesics $\gamma_t$ passing thru $w$ with the ends at $\partial \DD$
+There is a continuous one parameter family of geodesics $\gamma_t$ passing $w$ with the ends at $\partial \DD$
 such that $\gamma=\gamma_0$ and $\gamma_1$ is $\gamma$ with reversed parametrization.
 Note that the order of $x$ and $y$ on $p^{-1}(\gamma_t)$ does not change in~$t$.
 On the other hand the orders on $\gamma_0$ and $\gamma_1$ are opposite, a contradiction.\qeds
@@ -287,22 +287,21 @@ If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a R
 then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points; in particular, $f$ is light.
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 
-As it follows from \cite{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
-Namely, there exists a noninjective harmonic map from a closed disc to a $\CAT[0]$ disc
-which restricts to a homeomorphism of boundaries.
-Therefore, our main theorem is optimal even for harmonic maps.
+As it follows from \cite[Theorem 3]{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
+Namely, there exists a harmonic map $f$ from a closed disc to a disc with a metric which is flat except for one cone point $q$ of negative curvature such that $f^{-1}\{q\}$ is a nontrivilal tree.
 
-\parit{Example.}
-Let $\Sigma$ be a closed surface of genus $g$. Choose a $\CAT[0]$ metric $ds^2$ on $\Sigma$
-which is flat away from a finite number of cone points $C:=\{x_i\}_{i=1}^k$ where $k>4g-4$. 
-Let $u:\Sigma\to (\Sigma,ds^2)$ be the unique harmonic map homotopic to the identity.
-According to Theorem ? in \cite{Ku}, $u$ restricts to a diffeomorphism 
-$\Sigma\backslash u^{-1}C\to \Sigma\backslash u^{-1}C$. Let $\Phi$ be the associated Hopf differential.
-Since $k>4g-4$ there exists a cone point $x\in C$ such that $\Phi\neq 0$ on $u^{-1}(x)$. 
-By Theorem ? in \cite{Ku}, $u^{-1}(x)$ is a simply connected graph in $\Sigma$. Then for $\epsilon>0$
-small enough, $u^{-1} \overline{B_\epsilon(x)}$ is homeomorphic to a closed disc $D$ and $u$ restricts to
-a homeomorphism on $\partial D$. If we precompose $u|_D$ with a Riemann mapping $\rho:\DD\to D$, then
-we obtain a noninjective harmonic map between discs whose restriction to the boundary is a homeomorphism.
+Therefore, the main theorem is optimal even for harmonic maps.
+
+%\parit{Example.}
+%Let $\Sigma$ be a closed surface of genus $g$. Choose a $\CAT[0]$ metric $ds^2$ on $\Sigma$
+%which is flat away from a finite number of cone points $C:=\{x_i\}_{i=1}^k$ where $k>4g-4$. 
+%Let $u:\Sigma\to (\Sigma,ds^2)$ be the unique harmonic map homotopic to the identity.
+%According to Theorem ? in \cite{Ku}, $u$ restricts to a diffeomorphism 
+%$\Sigma\backslash u^{-1}C\to \Sigma\backslash u^{-1}C$. Let $\Phi$ be the associated Hopf differential.
+%Since $k>4g-4$ there exists a cone point $x\in C$ such that $\Phi\neq 0$ on $u^{-1}(x)$. 
+%By Theorem ? in \cite{Ku}, $u^{-1}(x)$ is a simply connected graph in $\Sigma$. Then for $\epsilon>0$
+%small enough, $u^{-1} \overline{B_\epsilon(x)}$ is homeomorphic to a closed disc $D$ and $u$ restricts to
+%a homeomorphism on $\partial D$. If we precompose $u|_D$ with a Riemann mapping $\rho:\DD\to D$, then we obtain a noninjective harmonic map between discs whose restriction to the boundary is a homeomorphism.
 
 %If $\phi$ is a holomorphic differential, then each zero of order $m$ contributes a cone point of angle $(m+2)\pi$
 %Hence by Gauss-Bonnet, the number of zeros is bounded by $4g-4$. 
