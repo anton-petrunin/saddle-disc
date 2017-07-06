@@ -15,6 +15,9 @@
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
 
+\newcommand{\nofootnote}[1]{%
+\begingroup\def\thefootnote{}\footnotetext{#1}\endgroup}
+
 
 \def\df{\buildrel \mathrm{def} \over{=\!\!=}}
 \def\parit#1{\medskip\noindent{\it #1}}

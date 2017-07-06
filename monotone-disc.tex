@@ -6,10 +6,21 @@
 
 \title{Monotonicity of saddle maps}
 \author{Anton Petrunin and Stephan Stadler}
-%\address{A. Petrunin\newline\vskip-4mm Math. Dept. PSU,University Park, PA 16802,USA}
-%\email{petrunin@math.psu.edu}
-%\address{S. Stadler\newline\vskip-4mm Math. Inst.,Universit\"at M\"unchen, Theresienstr. 39, D-80333 M\"unchen, Germany}\email{stadler@math.lmu.de}
-%\thanks{A.~Petrunin was partially supported by NSF grant DMS 1309340.}
+
+\nofootnote{A.~Petrunin was partially supported by NSF grant DMS 1309340.}
+
+\newcommand{\Addresses}{{\bigskip\footnotesize
+Anton Petrunin, \par\nopagebreak\textsc{Department of Mathematics, PSU, University Park, PA 16802, USA}
+\par\nopagebreak
+\textit{Email}: \texttt{petrunin@math.psu.edu}
+
+\medskip
+ 
+Stephan Stadler,
+\par\nopagebreak\textsc{Mathematisches Institut der Universität M\"unchen, Theresienstr. 39, D-80333 M\"unchen, Germany}
+\par\nopagebreak
+\textit{Email}: \texttt{stadler@math.lmu.de}
+}}
 
 
 \date{}
@@ -32,7 +43,7 @@ It was proved by Richard Schoen and Shing Tung Yau \cite{schoen-yau};
 an interesting generalization was obtained by J\"urgen Jost \cite{jost}.
 An extensive study of general saddle maps was given by Samuil Shefel \cite{shefel-2D} and \cite{shefel-3D};
 his work was inspired by a note of Alexander Alexandrov \cite{A} on the intrinsic metric of a general ruled surface.
-Part of the work of Samuil Shefel is described in a chapter of \cite{akp}.
+Part of the work of Samuil Shefel is described in \cite{akp}.
 
 A continuous map $f\:X\to Y$ is called \emph{light} if the inverse image of any point $y\in Y$ is totally disconnected.
 
@@ -62,8 +73,8 @@ Then $f$ is monotone.
 In other words, the theorem states that monotonicity is an appropriate generalization of univalentness which works for saddle maps.
 
 \parbf{Remarks.}
- Note that class of spaces satisfying the assumption for $\Delta$ contains any disc with a $\CAT[0]$ metric.
-In particular, it includes nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}
+Note that class of spaces satisfying the assumption for $\Delta$ contains any disc with a $\CAT[0]$ metric.
+Moreover, this class includes nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}
 as well as the surfaces described in \cite{jost}.
 
 For the saddle map $f\:\DD\to \Delta$ in the theorem,
@@ -99,17 +110,19 @@ intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison.
 Recall that harmonic maps $f\:M\to N$ between Riemannian manifolds can be defined as local energy minimizers 
 among maps with fixed values on the boundary.
 Here the energy is defined as 
-\[E(f)=\int_M|df|^2 \mathoperator{dvol},\]
+\[E(f)=\int_M|df|^2\cdot d\mathrm{vol},\]
 where $df\:\T M\to \T N$ is the differential of $f$.
 
 \begin{thm}{Proposition} 
-Assume $\Delta=(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\Delta$ are joined by unique geodesic $[x,y]$.
+Assume $\Delta=(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\Delta$ are joined by a geodesic $[x,y]$.
 Then any energy minimizing harmonic map $f\:\DD\to\Delta$ with fixed values on the boundary is saddle.
 \end{thm}
 
 \parit{Proof.}
 Assume contrary, that is for some geodesic $[x,y]$ in $\Delta$ the complement $\DD\backslash f^{-1}[x,y]$ has a component 
 $\Omega$ which does not meet the boundary $\partial\DD$.
+
+{
 
 \begin{wrapfigure}{r}{33 mm}
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/cutting-hat(1)}
@@ -133,10 +146,12 @@ Let us redefine the map $f$ in $\Omega$ by setting
 Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$, a contradiction.
 \qeds
 
+}
+
 \parbf{Remark.}
-There is a well established theory of harmonic maps from Euclidean domains into spaces with upper curvature bounds
-in the sense of Alexandrov, cf. \cite{GS} and \cite{KS}. In this more general setting harmonic maps are again defined as local minimizers of
-an appropriate energy functional. The above proof remains valid and harmonic maps are still saddle.
+The above proof remains valid if the metric on the target disc is not Riemannin, but has an upper curvature bounds in the sense of Alexandrov;
+the harmonic maps into such spaces can be also defined as local energy minimizers, see \cite{GS} and \cite{KS}.
+
 
 \section{The proof}
 
@@ -149,7 +164,7 @@ Then
 \end{enumerate}
 \end{thm}
 
-\parit{Proof; (i)} 
+\parit{Proof; (i).} 
 Let $\gamma$ be a geodesic in $\Delta$, disjoint from $K$ and with endpoints on $\partial\Delta$.
 Let $\Sigma_K$ be the set of all such geodesics.
 For each $\gamma\in\Sigma_K$ denote by
@@ -208,7 +223,7 @@ Indeed,
 \item If $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$. 
 \item If $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotone, $\Theta\cap \partial\DD$ is an open arc.
 \end{itemize}
-Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(i)}, every connected component of $\Theta$ has to intersect $\partial\DD$.
+Since $\{x\}$ is convex, by Claim \ref{claim}\textit{i}, every connected component of $\Theta$ has to intersect $\partial\DD$.
 It follows that $\Theta$ is connected as well.
 
 Consider the restriction of the projection $\DD\times\SS^1\to \SS^1$ to $\Omega$;
@@ -220,7 +235,7 @@ Since $\Phi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
 Since $f$ is monotone, $\sigma_s$ is an open arc in $\SS^1$.
 In particular $\sigma_s$ is connected and so is $\Psi_s$.
-Since $\Phi_s$ is a convex open set, by Claim \ref{claim}\textit{(ii)}, $\Psi_s$ is simply connected.
+Since $\Phi_s$ is a convex open set, by Claim \ref{claim}\textit{ii}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
 \begin{itemize}
@@ -274,7 +289,6 @@ in particular it is a homeomorphism.\qeds
 
 \begin{wrapfigure}{r}{34 mm}
 \begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mapping-cylinder(1)}
-%\lbl[rb]{41,17;$\xrightarrow{\hat f}$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -288,29 +302,14 @@ Under the name \emph{disc retracts}, these type of spaces are used in our paper 
 
 \parbf{On univalentness of harmonic maps.}
 If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a Riemannian metric,
-then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points; in particular, $f$ is light.
+then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
+In particular, $f$ is light if $f^{-1}\{f(x)\}=\{x\}$ for any $x\in\partial \DD$.
 
 As it follows from \cite[Theorem 3]{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
-Namely, there exists a harmonic map $f$ from a closed disc to a disc with a metric which is flat except for one cone 
-point $q$ of negative curvature such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
+Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for one cone point $q$ where it has negative curvature and (2) a harmonic map $f\:\DD\to \Delta$ such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
 
 Therefore, the main theorem is optimal even for harmonic maps.
-
-%\parit{Example.}
-%Let $\Sigma$ be a closed surface of genus $g$. Choose a $\CAT[0]$ metric $ds^2$ on $\Sigma$
-%which is flat away from a finite number of cone points $C:=\{x_i\}_{i=1}^k$ where $k>4g-4$. 
-%Let $u:\Sigma\to (\Sigma,ds^2)$ be the unique harmonic map homotopic to the identity.
-%According to Theorem ? in \cite{Ku}, $u$ restricts to a diffeomorphism 
-%$\Sigma\backslash u^{-1}C\to \Sigma\backslash u^{-1}C$. Let $\Phi$ be the associated Hopf differential.
-%Since $k>4g-4$ there exists a cone point $x\in C$ such that $\Phi\neq 0$ on $u^{-1}(x)$. 
-%By Theorem ? in \cite{Ku}, $u^{-1}(x)$ is a simply connected graph in $\Sigma$. Then for $\epsilon>0$
-%small enough, $u^{-1} \overline{B_\epsilon(x)}$ is homeomorphic to a closed disc $D$ and $u$ restricts to
-%a homeomorphism on $\partial D$. If we precompose $u|_D$ with a Riemann mapping $\rho:\DD\to D$, then we obtain a noninjective harmonic map between discs whose restriction to the boundary is a homeomorphism.
-
-%If $\phi$ is a holomorphic differential, then each zero of order $m$ contributes a cone point of angle $(m+2)\pi$
-%Hence by Gauss-Bonnet, the number of zeros is bounded by $4g-4$. 
-
 
 \begin{thebibliography}{52}
 
@@ -333,8 +332,6 @@ an answer to \textit{Harmonic maps are light.} MathOverflow
 \bibitem{GS} Gromov, M.; Schoen, R., 
 \textit{Harmonic maps into singular spaces and p-adic superrigidity for lattices in groups of rank one.} 
 Publications Mathématiques de l'IHÉS 76.1 (1992): 165-246.
-
-%\bibitem{H} Hamilton, R. S. ``Harmonic Maps of Manifolds with Boundary,'' Lecture Notes in Mathematics, Springer, 1975, ISBN 978-3-540-37530-2.
 
 \bibitem{jost} Jost, J.,
 \textit{Univalency of harmonic mappings between surfaces.}
@@ -400,5 +397,7 @@ Invent. Math. 44 (1978), no. 3, 265--278.
 Fund. Math. 22, 292--296 (1934)
 
 \end{thebibliography}
+
+\Addresses
 
 \end{document}
