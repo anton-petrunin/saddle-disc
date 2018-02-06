@@ -23,7 +23,6 @@ Stephan Stadler,
 \textit{Email}: \texttt{stadler@math.lmu.de}
 }}
 
-
 \date{}
 
 \maketitle
@@ -39,7 +38,7 @@ complement $\DD\backslash f^{-1}\Pi$ intersects the boundary $\partial \DD$.
 Ruled surfaces and harmonic maps provide examples of such maps.
 
 In this note we prove a synthetic analog of the univalentness theorem for saddle maps from disc to disc.
-The original theorem is formulated for harmonic maps and  surfaces with nonpositive curvature.
+The original theorem is formulated for harmonic maps and surfaces with nonpositive curvature.
 It was proved by Richard Schoen and Shing Tung Yau \cite{schoen-yau};
 an interesting generalization was obtained by J\"urgen Jost \cite{jost}.
 An extensive study of general saddle maps was given by Samuil Shefel \cite{shefel-2D} and \cite{shefel-3D};
@@ -67,7 +66,7 @@ Since a connected space is nonempty by definition, any monotone map is onto.
 Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
 such that any two points are joined by a unique geodesic and it depends continuously on the end points.
 Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotone map 
-$\partial\DD\to  \partial\Delta$.
+$\partial\DD\to\partial\Delta$.
 Then $f$ is monotone. 
 \end{thm}
 
@@ -86,9 +85,6 @@ Moore's quotient theorem \cite{moore} implies that the target of the map $g$ is 
 The light map $h$ is saddle and according to the theorem it is monotone.
 The latter implies that $h$ is a homeomorphism.
 
-
-
-
 \begin{thm}{Corollary}
 Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
 Assume that the orthogonal projection to the $(x,y)$-plane
@@ -100,6 +96,11 @@ In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a co
 \end{thm}
 
 To prove the corollary one has to project $\Sigma$ to the $(x,y)$-plane and apply the main theorem.
+More precisely, denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection of boundary of $\Sigma$.
+Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
+in particular the projection of $\Sigma$ lies in $F$.
+In other words, the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection sends $\DD\to F$;
+it remains to apply the main theorem for this composition.
 
 This corollary is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
 Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
@@ -115,7 +116,7 @@ Here the energy is defined as
 where $df\:\T M\to \T N$ is the differential of $f$.
 
 \begin{thm}{Proposition} 
-Assume $\Delta=(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\Delta$ are joined by a geodesic $[x,y]$.
+Assume $\Delta=(\DD,|{*}-{*}|)$ is a disc with Riemannian metric such that any two points $x,y\in\Delta$ are joined by a minimizing geodesic $[x,y]$.
 Then any energy minimizing harmonic map $f\:\DD\to\Delta$ with fixed values on the boundary is saddle.
 \end{thm}
 
@@ -135,16 +136,19 @@ $\Omega$ which does not meet the boundary $\partial\DD$.
 \end{wrapfigure}
 
 Let $\gamma(t)$ be the unit speed parametrization of the geodesic $[x,y]$ from $x$ to $y$.
-Let us redefine the map $f$ in $\Omega$ by setting 
+Let us redefine the map $f$ in $\Omega$ by setting $t(z)=\min\{\,|x-f(z)|,|x-y|\}$ and
 \[\hat f(z)=
 \left[
 \begin{aligned}
-&\gamma(\min\{\,|x-z|,|y-z|\,\})&&\text{if}&& z\in\Omega,
+&\gamma\circ t(z)&&\text{if}&& z\in\Omega,
 \\
 &f(z)&&\text{if}&& z\notin\Omega.
 \end{aligned}
 \right.\]
-Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$, a contradiction.
+Note that 
+\[|\hat f(z)-\hat f(z')|\le |f(z)-f(z')|\]
+for any $z,z'\in \DD$.
+It follows that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$, a contradiction.
 \qeds
 
 }
@@ -152,7 +156,6 @@ Note that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$,
 \parbf{Remark.}
 The above proof remains valid if the metric on the target disc is not Riemannin, but has an upper curvature bounds in the sense of Alexandrov;
 the harmonic maps into such spaces can also be defined as local energy minimizers, see \cite{GS} and \cite{KS}.
-
 
 \section{The proof}
 
@@ -183,7 +186,7 @@ Therefore the same holds for the union
 Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}\Phi$;
 denote by $\Gamma$ the disc bounded by $\gamma$.
 By \textit{(i)}, $f(\Gamma)$ lies in the convex hull of $f(\gamma)$ which will be denoted by $K$.
-Since $\Phi$ is convex,  $K\subset \Phi$.
+Since $\Phi$ is convex, $K\subset \Phi$.
 It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in $\Psi$.
 
 Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
@@ -204,14 +207,14 @@ Note that $\Phi_s$ and its complement are convex in $\Delta$.
 (Here we use that $\Delta$ is homeomorphic to a disc; the analogous statement in higher dimensions does not hold.)
 In particular, the relative boundary $\partial_\Delta\Phi_s$ is a geodesic.
 
-Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset  \DD\times\SS^1$ defined as
+Consider the two open subsets $\Theta\subset \DD$ and $\Omega\subset\DD\times\SS^1$ defined as
 \begin{align*}
 \Theta&=\DD\backslash f^{-1}\{x\},
 \\
 \Omega&=\set{(z,s)\in \DD\times\SS^1}{f(z)\in \Phi_s}.
 \end{align*}
 
-The  projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
+The projection $\DD\times\SS^1\to \DD$ sends $\Omega$ to $\Theta$.
 Note that the induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
 Indeed, for any point $z\in \Theta$ there is $s\in \SS^1$ such that $f(z)\in \Phi_s$ or equivalently $\measuredangle [x\,^{f(z)}_s]<\tfrac\pi2$.
 Moreover, since $f|_{\partial\DD}$ is monotone, the set of points $s$ satisfying the above condition is an open arc in $\SS^1$.
@@ -245,14 +248,11 @@ Therefore the projection $\Omega\to \SS^1$ induces an isomorphism of fundamental
 \item If $x\in\partial\DD$ then by a similar reason, we have $\pi_1\Omega=0$.
 \end{itemize}
 
-
-
 Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a curve in $\Theta$.
 \begin{itemize}
 \item If $x\notin\partial \DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain a free group with two generators, a contradiction.
 \item If $x\in\partial\DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain $\ZZ$ as a subgroup, a contradiction again.\qeds
 \end{itemize}
-
 
 \section{Final remarks}
 
@@ -261,16 +261,16 @@ The presented proof is a tricky fix of the following \emph{fake} proof of the ba
 We say where we cheat in the footnote.
 
 \parit{Fake proof.}
-Note that  $\deg f=1$;
+Note that $\deg f=1$;
 in particular $f$ is onto.
 It remains to show that $f$ is injective.
 
-Assume  $w=f(x)=f(y)$ for distinct points $x,y\in\DD$.
-Note that  $w$ lies in the interior of $\DD$.
+Assume $w=f(x)=f(y)$ for distinct points $x,y\in\DD$.
+Note that $w$ lies in the interior of $\DD$.
 Choose a chord $\gamma$ which contains $w$ and goes 
 from boundary to boundary of $\DD$.
 The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and $b$.
-We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.
+We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.%
 \footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as a pseudoarc, where the order of points has no sense.}
 
 There is a continuous one parameter family of geodesics $\gamma_t\ni w$ with the ends at $\partial \DD$
@@ -284,7 +284,7 @@ A correct proof of the baby theorem can be build on the deep theorem of Shefel \
 Let us extend the map of the disc by the identity map outside the disc. 
 According to Shefel's theorem the induced length metric on the plane is $\CAT[0]$.
 This metric coincides with the Euclidean metric outside a compact set 
-therefore the induced intrinsic metric metric is flat and the map is isometric for this metric;
+therefore the induced intrinsic metric is flat and the map is isometric for this metric;
 in particular it is a homeomorphism.\qeds
 
 \begin{wrapfigure}{r}{34 mm}
@@ -299,7 +299,6 @@ So the target space $\Delta$ might look like the solid figure eight on the pictu
 
 Under the name \emph{disc retracts}, these type of spaces are used in our paper \cite{petrunin-stadler} on a closely related subject. 
 
-
 \parbf{On univalentness of harmonic maps.}
 If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a Riemannian metric,
 then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
@@ -309,7 +308,7 @@ In particular, $f$ is light if $f^{-1}\{f(x)\}=\{x\}$ for any $x\in\partial \DD$
 As it follows from \cite[Theorem 3]{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
 Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for one cone point $q$ where it has negative curvature and (2) a harmonic map $f\:\DD\to \Delta$ such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
 
-Therefore, the main theorem is optimal even for harmonic maps.
+Therefore, our main theorem is optimal even for harmonic maps.
 
 \begin{thebibliography}{52}
 
@@ -319,20 +318,17 @@ Therefore, the main theorem is optimal even for harmonic maps.
 Вестник ЛГУ 2 (1957): 15---44.
 \end{otherlanguage}
 %Alexandrov, A. D., 
-%\textit{Ruled  surfaces  in  metric  spaces.}
+%\textit{Ruled surfaces in metric spaces.}
 %Vestnik Leningrad. Univ., 12:5-26, 1957 (Russian).
-
-
 
 \bibitem{akp}
 Alexander, S.; Kapovitch, V. and Petrunin, A.,
 \textit{Invitation to Alexandrov geometry: CAT [0] spaces.}
 arXiv:1701.03483.
 
-\bibitem{eremenko} Eremenko, A.,  
+\bibitem{eremenko} Eremenko, A., 
 an answer to \textit{Harmonic maps are light.} MathOverflow
 \texttt{https://mathoverflow.net/q/272047 (version: 2017-06-13)}
-
 
 \bibitem{GS} Gromov, M.; Schoen, R., 
 \textit{Harmonic maps into singular spaces and p-adic superrigidity for lattices in groups of rank one.} 
@@ -350,22 +346,17 @@ Comm. Anal. Geom. , 1(3-4):561–659, 1993.
 \textit{Harmonic maps between flat surfaces with conical singularities.}
 Mathematische Zeitschrift 221 (1996), 421--436.
 
-
 \bibitem{moore}
 Moore, R. L.,
 \textit{Concerning upper semi-continuous collections of continua.}
 Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
 
-
-
-
-
 \bibitem{petrunin-orthodox} Petrunin, A., 
 \textit{Puzzles in geometry which I know and love.}
-\texttt{arXiv:0906.0290 [math.HO]}
+\texttt{arXiv:0906.0290}
 
 \bibitem{petrunin-stadler} Petrunin, A.; Stadler, S., 
-\textit{Metric minimzing surfaces revisited.} \texttt{arXiv:1707.09635 [math.DG]}
+\textit{Metric minimzing surfaces revisited.} \texttt{arXiv:1707.09635}
 
 \bibitem{shefel-2D} 
 \begin{otherlanguage}{russian}
