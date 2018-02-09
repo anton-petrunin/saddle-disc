@@ -62,7 +62,7 @@ It is easy to see that this definition agrees with the one given above.
 A continuous map $f\:X\to Y$ is called \emph{monotone} if the inverse image of any point $y\in Y$ is connected.
 Since a connected space is nonempty by definition, any monotone map is onto.
 
-\begin{thm}{Main theorem}\label{thm:main}
+\begin{thm}{Monotonicity theorem}\label{thm:main}
 Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
 such that any two points are joined by a unique geodesic and it depends continuously on the end points.
 Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotone map 
@@ -72,7 +72,6 @@ Then $f$ is monotone.
 
 In other words, the theorem states that monotonicity is an appropriate generalization of univalentness which works for saddle maps.
 
-\parbf{Remarks.}
 Note that class of spaces satisfying the assumption for $\Delta$ contains any disc with a $\CAT[0]$ metric.
 Moreover, this class includes nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}
 as well as the surfaces described in \cite{jost}.
@@ -85,7 +84,12 @@ Moore's quotient theorem \cite{moore} implies that the target of the map $g$ is 
 The light map $h$ is saddle and according to the theorem it is monotone.
 The latter implies that $h$ is a homeomorphism.
 
-\begin{thm}{Corollary}
+The following theorem is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
+Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
+intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
+(It is not known whether any saddle surface in the Euclidean space has locally $\CAT[0]$ induced intrinsic metric.)
+
+\begin{thm}{Saddle graph theorem}\label{cor:projection}
 Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
 Assume that the orthogonal projection to the $(x,y)$-plane
 maps the boundary of $\Sigma$
@@ -95,17 +99,9 @@ Then the orthogonal projection to the $(x,y)$-plane is injective on all of~$\Sig
 In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
 \end{thm}
 
-To prove the corollary one has to project $\Sigma$ to the $(x,y)$-plane and apply the main theorem.
-More precisely, denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection of boundary of~$\Sigma$.
-Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
-in particular the projection of $\Sigma$ lies in~$F$.
-In other words, the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection sends $\DD\to F$;
-it remains to apply the main theorem for this composition.
+\medskip
 
-This corollary is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
-Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
-intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
-(It is not known whether any saddle surface in the Euclidean space has locally $\CAT[0]$ induced intrinsic metric.)
+We want to thank the anonymous referee for pointing that saddle graph theorem is not an immediate corollary of the monotonicity theorem.
 
 \section{Energy minimizing maps are saddle}
 
@@ -157,10 +153,10 @@ It follows that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial 
 The above proof remains valid if the metric on the target disc is not Riemannin, but has an upper curvature bounds in the sense of Alexandrov;
 the harmonic maps into such spaces can also be defined as local energy minimizers, see \cite{GS} and \cite{KS}.
 
-\section{The proof}
+\section{Monotonicity}
 
 \begin{thm}{Claim}\label{claim}
-Let $f\:\DD\to \Delta$ be as in the main theorem.
+Let $f\:\DD\to \Delta$ be as in the monotonicity theorem.
 Then 
 \begin{enumerate}[(i)]
 \item for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects~$\partial\DD$.
@@ -192,7 +188,7 @@ It follows that $\Gamma\subset\Psi$ and therefore $\gamma$ is contractible in~$\
 Since $\gamma$ is arbitrary, $\Psi$ is simply connected.
 \qeds
 
-\parit{Proof of the main theorem.}
+\parit{Proof of the monotonicity theorem.}
 Since $f|_{\partial\DD}\:\partial\DD \to\partial \Delta$ is monotone, it has degree~$\pm1$.
 We can assume that the orientations on $\DD$ and $\Delta$ are chosen so that $\deg f|_{\partial\DD}=1$
 and therefore $\deg f=1$;
@@ -254,6 +250,89 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 \item If $x\in\partial\DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain $\ZZ$ as a subgroup, a contradiction again.\qeds
 \end{itemize}
 
+\section{Saddle graph}
+
+\emph{In this section we will prove the saddle graph theorem (\ref{cor:projection}).}
+
+Denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection of boundary of~$\Sigma$.
+Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
+in particular the projection of $\Sigma$ lies in~$F$.
+Therefore the monotonicity theorem can be applied to the
+the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection sends $\DD\to F$.
+
+It follows that, any vertical line intersects $\Sigma$ along a closed interval or a point or the empty set.
+Therefore to prove the saddle graph theorem it is sufficient to show the following:
+
+\begin{thm}{Claim}
+$\Sigma$ contains no vertical segments. 
+\end{thm}
+
+The idea in the proof is similar to the one used in the monotonicity theorem.
+
+\begin{wrapfigure}{r}{24 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/Pi(1)}
+\lbl[r]{0,2;$a$}
+\lbl[r]{0,13;$a'\!$}
+\lbl[l]{23.5,53;$b$}
+\lbl[l]{23.5,38;$b'$}
+\lbl[lt]{13,27;$u$}
+\lbl[r]{10,39;$v$}
+\lbl[tl]{16,36;$w$}
+\lbl[t]{5,9,70;$\ell$}
+\lbl[b]{14,43.3,15;$\Sigma$}
+\lbl{15,10;$\Pi$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Assume contrary; that is, a vertical segment from $u$ to $v$ lies in $\Sigma$;
+we assume that $v$ is above $u$. 
+
+Fix a point $w$ under $\Sigma$ which is sufficiently close to $v$.
+Denote by $\ell$ the line $uw$.
+Without loss of generality, we can assume that $\partial\Sigma$ goes around $\ell$.
+
+Let $[a,b]$ be the maximal segment in $\ell$ which projects in~$F$;
+we assume that $a$, $u$, $w$ and $b$ appear in this order.
+
+Denote by $a'$ and $b'$ the points on $\Sigma$ which share the vertical line with $a$ and $b$ correspondingly.
+The points $a',u,v$ and $b'$ lie on the intersection of $\Sigma$ with the vertical plane $\Pi\supset \ell$.
+Note that $a'$ lies above $\ell$, $u$ on $\ell$, $v$ above $\ell$ and $b'$ below $\ell$.
+
+Consider one parameter family of planes $\Pi_t$ containing $\ell$ which rotate from the position $\Pi$ to the position with opposite orientation;
+so, the planes $\Pi_0$ and $\Pi_1$ coinside with $\Pi$, but equipped with the opposite orientations and $\Pi_t$ is not vertical for $0<t<1$ and the plane rotates at fixed speed.
+
+We say that $\Pi_t$ is right (left) if there is a curve in $\Sigma\backslash \Pi_t$ connecting $v$ to $a'$ which goes on the right (correspondingly left) from $u$.
+We can assume that $\Pi_t$ is right for $t\approx0$ and left for $t\approx1$.
+
+Since $\Sigma$ is saddle, for any $t$, the plane $\Pi_t$ can not be right and left at the same time.
+The set of $t\in (0,1)$ for which $\Pi_t$ is right (or left) is open.
+Therefore we can fix a value $t$ such that the plane $\Pi_t$ is neither right nor left.
+
+That is, the connected component $\Phi$ of $v$ in $\Sigma\backslash\Pi_t$ does not contain $a$.
+Set $\phi=\Phi\cap\partial\Sigma$.
+
+Given a subset $A\subset\Sigma$ denote by $h(A)$ its \emph{vertical hight} with respect to $\Pi_t$;
+that is, 
+\[h(A)=\sup\{|x-x'|\},\]
+where the lowest upper bound is taken for $x\in A$, $x'\in \Pi_t$ such that the line $xx'$ is vertical.
+Note that
+\begin{itemize}
+\item Since $\Sigma$ is saddle $h(\Phi)\le h(\phi)$; otherwise a parallel plane to $\Pi_t$ would cut a hat from $\Sigma$.\footnote{Since $\phi\subset\Phi$ we also have $h(\Phi)\ge h(\phi)$, but we do not need it.}
+\item Since the point $u$ lies above $v$, we have $h(\Phi)\ge |u-v|$.
+\item Choosing $w$ close to $v$, we can ensure that all the planes $\Pi_t$ are almost vertical and therefore $h(\phi)$ is arbitrary small.
+Namely, for any component $\gamma\not\ni a',b'$ of $\partial\Sigma\backslash\Pi_t$ we have 
+\[h(\gamma)=\omega_s(c\cdot\tfrac{h(\Sigma)}{\lambda})\]
+where $\lambda$ is the slope of $\ell$, 
+the constant $c$ depends on the shape of $F$ and $u$,  and 
+$\omega_s$ denotes the modulus of continuity of the function $s\:\partial F\to \RR$ with the graph $\partial\Sigma$.
+\end{itemize}
+These three statements contradict each other.
+\qeds
+
+
+
+
 \section{Final remarks}
 
 \parbf{On the baby theorem.}
@@ -269,11 +348,11 @@ Assume $w=f(x)=f(y)$ for distinct points $x,y\in\DD$.
 Note that $w$ lies in the interior of~$\DD$.
 Choose a chord $\gamma$ which contains $w$ and goes 
 from boundary to boundary of~$\DD$.
-The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\|\DD\|_s$, say $a$ and~$b$.
+The inverse image $p^{-1}(\gamma)$ is a contractible set with two ends at $\partial\DD$, say $a$ and~$b$.
 We can assume that the points $a,x,y,b$ appear in the same order on $p^{-1}(\gamma)$.%
 \footnote{This is where we are cheating: the inverse image $p^{-1}(\gamma)$ might be as terrible as a pseudoarc, where the order of points has no sense.}
 
-There is a continuous one parameter family of geodesics $\gamma_t\ni w$ with the ends at $\partial \DD$
+There is a continuous one parameter family of chords $\gamma_t\ni w$ with the ends at $\partial \DD$
 such that $\gamma=\gamma_0$ and $\gamma_1$ is $\gamma$ with reversed parametrization.
 Note that the order of $x$ and $y$ on $p^{-1}(\gamma_t)$ does not change in~$t$.
 On the other hand the orders on $\gamma_0$ and $\gamma_1$ are opposite, a contradiction.\qeds
@@ -294,7 +373,7 @@ in particular it is a homeomorphism.\qeds
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{A generalization of the main theorem.}
+\parbf{A generalization of the monotonicity theorem.}
 In the proof the condition that $\Delta$ is a disc can be relaxed to the following:
 the mapping cylinder of the target space over $f|_{\partial\DD}$ is homeomorphic to a closed disc.
 So the target space $\Delta$ might look like the solid figure eight on the picture.
@@ -309,10 +388,17 @@ then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 In particular, $f$ is light if $f^{-1}\{f(x)\}=\{x\}$ for any $x\in\partial \DD$.
 
-As it follows from \cite[Theorem 3]{Ku}, the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
+As it shown by Ernst Kuwert (\cite[Theorem 3]{Ku}) the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
 Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for one cone point $q$ where it has negative curvature and (2) a harmonic map $f\:\DD\to \Delta$ such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
 
-Therefore, our main theorem is optimal even for harmonic maps.
+Therefore, the monotonicity theorem is optimal even for harmonic maps.
+
+\parbf{On saddle graph theorem.}
+One could define saddle disc in $\CAT[0]$ space as the subset $\Sigma$ homeomorphic to disc such that for any closed convex set $K$ and connected component of $\Sigma\backslash K$ meets the boundary.
+
+The saddle graph theorem, does not for saddle discs in the product space $C\times \RR$, where $C$ is a cone with large total angle --- the vertical line in the product space $C\times \RR$ might intersect the saddle disc along a nontrivial segment.
+An example can be build from the quoted construction of Ernst Kuwert, but actually simpler.
+
 
 \begin{thebibliography}{52}
 
