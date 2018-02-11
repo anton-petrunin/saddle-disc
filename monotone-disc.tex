@@ -101,7 +101,7 @@ In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a co
 
 \medskip
 
-We want to thank the anonymous referee for pointing that saddle graph theorem is not an immediate corollary of the monotonicity theorem.
+We want to thank the anonymous referee for keen comments.
 
 \section{Energy minimizing maps are saddle}
 
@@ -252,86 +252,125 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 
 \section{Saddle graph}
 
-\emph{In this section we will prove the saddle graph theorem (\ref{cor:projection}).}
-
+\parit{Proof of the saddle graph theorem (\ref{cor:projection}).}
 Denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection of boundary of~$\Sigma$.
 Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
 in particular the projection of $\Sigma$ lies in~$F$.
 Therefore the monotonicity theorem can be applied to the
 the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection sends $\DD\to F$.
 
-It follows that, any vertical line intersects $\Sigma$ along a closed interval or a point or the empty set.
+It follows that, any vertical line in $F\times \RR$ intersects $\Sigma$ along a closed interval or a point.
+In other words, there are two functions $\alpha,\beta\:F\to \RR$
+such that 
+\[(x,y,z)\in \Sigma
+\quad\iff\quad
+\alpha(x,y)\le z\le \beta(x,y).\]
 Therefore to prove the saddle graph theorem it is sufficient to show the following:
 
 \begin{thm}{Claim}
-$\Sigma$ contains no vertical segments. 
+$\alpha\equiv \beta$.
 \end{thm}
 
-The idea in the proof is similar to the one used in the monotonicity theorem.
+Before proving the claim let us list obvious properties of the functions $\alpha$ and~$\beta$. 
 
-\begin{wrapfigure}{r}{24 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/Pi(1)}
-\lbl[r]{0,2;$a$}
-\lbl[r]{0,13;$a'\!$}
-\lbl[l]{23.5,53;$b$}
-\lbl[l]{23.5,38;$b'$}
-\lbl[lt]{13,27;$u$}
-\lbl[r]{10,39;$v$}
-\lbl[tl]{16,36;$w$}
-\lbl[t]{5,9,70;$\ell$}
-\lbl[b]{14,43.3,15;$\Sigma$}
-\lbl{15,10;$\Pi$}
+Note that the function $\alpha\:F\to \RR$ is lower semicontinuous
+and $\beta\:F\to \RR$ is an upper semicontinuous.
+Further $\alpha$ and $\beta$ agree on $\partial F$ and the 
+restriction $\alpha|_{\partial F}=\beta|_{\partial F}$ is continuous.
+In particular if an arc $\theta\subset \partial F$ is sufficiently short, then
+the change of values of $\alpha$ in $\theta$ is small.
+
+Since $\Sigma$ is saddle, for any linear function $\lambda\:\RR^2\to\RR$ and any closed subset $D\subset F$, 
+the maximum of restrictions $(\alpha-\lambda)|_D$ admits a maximum point on the boundary $\partial D$.
+
+Now let us start to prove the claim.
+
+Assume contrary, that is $\alpha(s)<\beta(s)$ for some $s\in F$.
+Note that $s$ lies in the interior of $F$ and we can find a pair of points $p$ and $q$ arbitrary close to $s$
+such that $\alpha(q)>\beta(p)+\eps$ for some fixed $\eps>0$.
+
+Draw the chord $[a,b]$ of $F$ containing $p$ and $q$;
+we assume that the points $a,p,q,b$ appear on the chord in this order.
+
+Consider the linear function $\lambda\:[a,b]\to \RR$ such that 
+\[\lambda(p)=\beta(p)+\tfrac\eps3,\quad\lambda(q)=\alpha(p)-\tfrac\eps3.\]
+Let $\ell$ be the graph of $\lambda$ over $[a,b]$; it is a line segment in $F\times \RR$.
+
+Consider one parameter family of planes $\Pi_t\supset \ell$, $t\in(0,1)$ which rotates by angle $\pi$ approaching the vertical plane as $t$ goes to $0$ or $1$.
+
+Note that the plane $\Pi_t$ is a graph of linear function $\lambda_t\:\RR^2\to \RR$ 
+and the restriction $\lambda_t|_{[a,b]}$ agrees with $\lambda$ for any $t$.
+Set 
+\[\Theta_t=\set{u\in F}{\alpha(u)>\lambda_t(u)};\]
+note that $\Theta_t$ is open in $F$ and $\Theta_t\ni a,q$ and $\Theta_t\not\ni p,b$ for any $t$.
+
+We say that the value $t$ is right (left) if $a$ can be connected to $q$ by a curve in $\Theta_t$ which goes on right (correspondingly left) from $p$.
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(5 mm),r(0 mm),l(0 mm)]{pics/yin-yang--left(1)}
+\lbl[t]{11,1;$a$}
+\lbl[b]{11,36;$b$}
+\lbl[l]{13,15;$p$}
+\lbl[r]{10,25;$q$}
+\lbl{18,5;$\Theta_t$}
+\lbl[t]{18,-3;left}
 \end{lpic}
-\end{wrapfigure}
+\begin{lpic}[t(-0 mm),b(5 mm),r(0 mm),l(0 mm)]{pics/yin-yang--middle(1)}
+\lbl[t]{11,1;$a$}
+\lbl[b]{11,36;$b$}
+\lbl[l]{13,15;$p$}
+\lbl[r]{10,25;$q$}
+\lbl[l]{33.6,28;$r$}
+\lbl{20,25;$\Theta_t'$}
+\lbl{20,5;$\Theta_t$}
+\lbl[t]{18,-3;neither}
+\end{lpic}
+\begin{lpic}[t(-0 mm),b(5 mm),r(0 mm),l(0 mm)]{pics/yin-yang--right(1)}
+\lbl[t]{11,1;$a$}
+\lbl[b]{11,36;$b$}
+\lbl[l]{13,15;$p$}
+\lbl[r]{10,25;$q$}
+\lbl{20,5;$\Theta_t$}
+\lbl[t]{18,-3;right}
+\end{lpic}
+\end{center}
 
-\parit{Proof.}
-Assume contrary; that is, a vertical segment from $u$ to $v$ lies in $\Sigma$;
-we assume that $v$ is above $u$. 
+Since $\Sigma$ is saddle, a value $t$ can not be right and left at the same time --- if it is the case, then $\Pi_t$ cuts a hat from $\Sigma$.
 
-Fix a point $w$ under $\Sigma$ which is sufficiently close to $v$.
-Denote by $\ell$ the line $uw$.
-Without loss of generality, we can assume that $\partial\Sigma$ goes around $\ell$.
+The sets of right (left) values are open in $[0,1]$.
+We can assume that all values $t\approx0$ are left and all values $t\approx1$ are right.
+Therefore there is a value $t$ which is neither left nor right.
 
-Let $[a,b]$ be the maximal segment in $\ell$ which projects in~$F$;
-we assume that $a$, $u$, $w$ and $b$ appear in this order.
+Fix this value from now on.
+Note that the connected component $\Theta_t'\ni q$ in $\Theta_t$ does not contain $a$.
 
-Denote by $a'$ and $b'$ the points on $\Sigma$ which share the vertical line with $a$ and $b$ correspondingly.
-The points $a',u,v$ and $b'$ lie on the intersection of $\Sigma$ with the vertical plane $\Pi\supset \ell$.
-Note that $a'$ lies above $\ell$, $u$ on $\ell$, $v$ above $\ell$ and $b'$ below $\ell$.
+Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_t)|_{\Theta_t'}$ admits its maximum on $\partial F\cap \Theta_t'$.
+By construction $\alpha(q)-\lambda_t(q)>\tfrac\eps3$; 
+therefore 
+\[\alpha(r)-\lambda_t(r)>\tfrac\eps3
+\eqlbl{eq:alpha-lambda(r)}
+\] 
+for some $r\in \partial F\cap \Theta_t'$.
 
-Consider one parameter family of planes $\Pi_t$ containing $\ell$ which rotate from the position $\Pi$ to the position with opposite orientation;
-so, the planes $\Pi_0$ and $\Pi_1$ coinside with $\Pi$, but equipped with the opposite orientations and $\Pi_t$ is not vertical for $0<t<1$ and the plane rotates at fixed speed.
+Denote by $\theta$ the connected component of $r$ in $\partial F\cap \Theta_t'$.
+Without loss of generality, we can assume that $z$-coordinate of points on $\Sigma$ are between 0 and 1.
+It follows that $\theta$ lies in a thin strip $S$ described by the inequalities
+\[0\le \lambda_t\le 1.\]
 
-We say that $\Pi_t$ is right (left) if there is a curve in $\Sigma\backslash \Pi_t$ connecting $v$ to $a'$ which goes on the right (correspondingly left) from $u$.
-We can assume that $\Pi_t$ is right for $t\approx0$ and left for $t\approx1$.
+Since $p$ and $q$ are close to $s$, 
+the slope of $\lambda$ and therefore $\lambda_t$ can be made arbitrary large;
+therefore the strip $S$ can be assumed to be arbitrary thin.
+It follows that the arc $\theta$ can be assumed to be  arbitrary short.
+(Here we use that $s$ lies in the interior of $F$ and $s\in S$.)
+Therefore the change of values of $\alpha$ in $\theta$ can be assumed to be arbitrary small.
 
-Since $\Sigma$ is saddle, for any $t$, the plane $\Pi_t$ can not be right and left at the same time.
-The set of $t\in (0,1)$ for which $\Pi_t$ is right (or left) is open.
-Therefore we can fix a value $t$ such that the plane $\Pi_t$ is neither right nor left.
-
-That is, the connected component $\Phi$ of $v$ in $\Sigma\backslash\Pi_t$ does not contain $a$.
-Set $\phi=\Phi\cap\partial\Sigma$.
-
-Given a subset $A\subset\Sigma$ denote by $h(A)$ its \emph{vertical hight} with respect to $\Pi_t$;
-that is, 
-\[h(A)=\sup\{|x-x'|\},\]
-where the lowest upper bound is taken for $x\in A$, $x'\in \Pi_t$ such that the line $xx'$ is vertical.
-Note that
-\begin{itemize}
-\item Since $\Sigma$ is saddle $h(\Phi)\le h(\phi)$; otherwise a parallel plane to $\Pi_t$ would cut a hat from $\Sigma$.\footnote{Since $\phi\subset\Phi$ we also have $h(\Phi)\ge h(\phi)$, but we do not need it.}
-\item Since the point $u$ lies above $v$, we have $h(\Phi)\ge |u-v|$.
-\item Choosing $w$ close to $v$, we can ensure that all the planes $\Pi_t$ are almost vertical and therefore $h(\phi)$ is arbitrary small.
-Namely, for any component $\gamma\not\ni a',b'$ of $\partial\Sigma\backslash\Pi_t$ we have 
-\[h(\gamma)=\omega_s(c\cdot\tfrac{h(\Sigma)}{\lambda})\]
-where $\lambda$ is the slope of $\ell$, 
-the constant $c$ depends on the shape of $F$ and $u$,  and 
-$\omega_s$ denotes the modulus of continuity of the function $s\:\partial F\to \RR$ with the graph $\partial\Sigma$.
-\end{itemize}
-These three statements contradict each other.
+Note that $\lambda_t$ is monotonic on $\theta$ and 
+the function $\alpha-\lambda_t$ vanish on the ends on $\theta$.
+It follows that 
+\[\sup\set{\alpha(u)-\lambda_t(u)}{u\in\theta}\]
+can be assumed to be arbitrary small.
+The latter contradicts \ref{eq:alpha-lambda(r)}.
 \qeds
-
-
-
 
 \section{Final remarks}
 
@@ -396,7 +435,7 @@ Therefore, the monotonicity theorem is optimal even for harmonic maps.
 \parbf{On saddle graph theorem.}
 One could define saddle disc in $\CAT[0]$ space as the subset $\Sigma$ homeomorphic to disc such that for any closed convex set $K$ and connected component of $\Sigma\backslash K$ meets the boundary.
 
-The saddle graph theorem, does not for saddle discs in the product space $C\times \RR$, where $C$ is a cone with large total angle --- the vertical line in the product space $C\times \RR$ might intersect the saddle disc along a nontrivial segment.
+With this definition, the saddle graph theorem, does not hold for saddle discs in the product space $C\times \RR$, where $C$ is a cone with large total angle --- the vertical line in the product space $C\times \RR$ might intersect the saddle disc along a nontrivial segment.
 An example can be build from the quoted construction of Ernst Kuwert, but actually simpler.
 
 
