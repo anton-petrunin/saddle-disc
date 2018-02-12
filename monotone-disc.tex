@@ -35,7 +35,10 @@ We prove an analog of Schoen--Yau univalentness theorem for saddle maps between 
 
 A map from a closed disc $\DD$ to a Euclidean space is called \emph{saddle} if for any hyperplane $\Pi$ each connected component of the 
 complement $\DD\backslash f^{-1}\Pi$ intersects the boundary~$\partial \DD$.
-Ruled surfaces and harmonic maps provide examples of such maps.
+A connected component which does not meet the boundary will be called \emph{hat},
+so saddle map can be defined as a \emph{map with no hats}.
+
+Ruled surfaces and harmonic maps provide examples of saddle maps.
 
 In this note we prove a synthetic analog of the univalentness theorem for saddle maps from disc to disc.
 The original theorem is formulated for harmonic maps and surfaces with nonpositive curvature.
@@ -84,7 +87,7 @@ Moore's quotient theorem \cite{moore} implies that the target of the map $g$ is 
 The light map $h$ is saddle and according to the theorem it is monotone.
 The latter implies that $h$ is a homeomorphism.
 
-The following theorem is a generalization of the problem ``Saddle surface'' in \cite{petrunin-orthodox}.
+The following theorem is a generalization of the problem ``Saddle surface'' in~\cite{petrunin-orthodox}.
 Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
 intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
 (It is not known whether any saddle surface in the Euclidean space has locally $\CAT[0]$ induced intrinsic metric.)
@@ -101,7 +104,8 @@ In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a co
 
 \medskip
 
-We want to thank the anonymous referee for keen comments.
+\parbf{Acknowledgements.}
+We want to thank the referee for keen comments.
 
 \section{Energy minimizing maps are saddle}
 
@@ -141,16 +145,16 @@ Let us redefine the map $f$ in $\Omega$ by setting $t(z)=\min\{\,|x-f(z)|,|x-y|\
 &f(z)&&\text{if}&& z\notin\Omega.
 \end{aligned}
 \right.\]
-Note that 
+Note that $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$ and
 \[|\hat f(z)-\hat f(z')|\le |f(z)-f(z')|\]
 for any $z,z'\in \DD$.
-It follows that $E(f)>E(\hat f)$ and $f|_{\partial \DD}\equiv \hat f|_{\partial \DD}$, a contradiction.
+It follows that $E(f)>E(\hat f)$, a contradiction.
 \qeds
 
 }
 
 \parbf{Remark.}
-The above proof remains valid if the metric on the target disc is not Riemannin, but has an upper curvature bounds in the sense of Alexandrov;
+The above proof remains valid if the metric on the target disc is not Riemannian, but has an upper curvature bounds in the sense of Alexandrov;
 the harmonic maps into such spaces can also be defined as local energy minimizers, see \cite{GS} and \cite{KS}.
 
 \section{Monotonicity}
@@ -159,8 +163,8 @@ the harmonic maps into such spaces can also be defined as local energy minimizer
 Let $f\:\DD\to \Delta$ be as in the monotonicity theorem.
 Then 
 \begin{enumerate}[(i)]
-\item for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects~$\partial\DD$.
-\item for any open convex set $\Phi\subset\Delta$ each connected component of $f^{-1}\Phi$ is simply connected.
+\item\label{claim:i} for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects~$\partial\DD$.
+\item\label{claim:ii} for any open convex set $\Phi\subset\Delta$ each connected component of $f^{-1}\Phi$ is simply connected.
 \end{enumerate}
 \end{thm}
 
@@ -172,7 +176,7 @@ $H_\gamma$ the component of $\Delta\backslash\gamma$ which contains~$K$.
 Then
 \[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma\]
 since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc.
-In other words, if $x\notin K$ then there is a geodesic $\gamma$ which separates $K$ from~$x$. %MORE???
+In other words, if $x\notin K$ then some geodesic separates $K$ from~$x$. %MORE???
 
 By definition of saddle maps, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary~$\partial\DD$.
 Therefore the same holds for the union
@@ -215,7 +219,7 @@ Note that the induced homomorphism $\pi_1\Omega\to \pi_1\Theta$ is onto.
 Indeed, for any point $z\in \Theta$ there is $s\in \SS^1$ such that $f(z)\in \Phi_s$ or equivalently $\measuredangle [x\,^{f(z)}_s]<\tfrac\pi2$.
 Moreover, since $f|_{\partial\DD}$ is monotone, the set of points $s$ satisfying the above condition is an open arc in $\SS^1$.
 It follows that one can fix a continuous map $z\mapsto s_z$ such that $f(z)\in \Phi_{s_z}$ for any $z\in \Theta$.
-Then for any loop $\alpha$ in $\Theta$ the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is a $f$-lift of $\alpha$ in $\Omega\subset\DD\times\SS^1$.
+Then for any loop $\alpha$ in $\Theta$ the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is an $f$-lift of $\alpha$ in $\Omega\subset\DD\times\SS^1$.
 
 Note that $\Theta\cap \partial\DD$ is connected.
 Indeed,
@@ -223,7 +227,7 @@ Indeed,
 \item If $x\notin \partial\DD$, then $\Theta\cap \partial\DD=\partial \DD$. 
 \item If $x\in \partial\DD$, then since $f|_{\partial\DD}$ is monotone, $\Theta\cap \partial\DD$ is an open arc.
 \end{itemize}
-Since $\{x\}$ is convex, by Claim \ref{claim}\textit{i}, every connected component of $\Theta$ has to intersect~$\partial\DD$.
+Since $\{x\}$ is convex, by Claim \ref{claim}\textit{(\ref{claim:i})}, every connected component of $\Theta$ has to intersect~$\partial\DD$.
 It follows that $\Theta$ is connected as well.
 
 Consider the restriction of the projection $\DD\times\SS^1\to \SS^1$ to $\Omega$;
@@ -235,7 +239,7 @@ Since $\Phi_s$ is a complement of a closed convex set,
 each connected component must meet $\sigma_s=\Psi_s\cap\SS^1$.
 Since $f$ is monotone, $\sigma_s$ is an open arc in~$\SS^1$.
 In particular $\sigma_s$ is connected and so is~$\Psi_s$.
-Since $\Phi_s$ is a convex open set, by Claim \ref{claim}\textit{ii}, $\Psi_s$ is simply connected.
+Since $\Phi_s$ is a convex open set, by Claim \ref{claim}\textit{(\ref{claim:ii})}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff f(s)=x$.
 \begin{itemize}
@@ -271,7 +275,7 @@ Therefore to prove the saddle graph theorem it is sufficient to show the followi
 $\alpha\equiv \beta$.
 \end{thm}
 
-Before proving the claim let us list obvious properties of the functions $\alpha$ and~$\beta$. 
+Before proving the claim let us list properties of the functions $\alpha$ and~$\beta$. 
 
 Note that the function $\alpha\:F\to \RR$ is lower semicontinuous
 and $\beta\:F\to \RR$ is an upper semicontinuous.
@@ -281,13 +285,15 @@ In particular if an arc $\theta\subset \partial F$ is sufficiently short, then
 the change of values of $\alpha$ in $\theta$ is small.
 
 Since $\Sigma$ is saddle, for any linear function $\lambda\:\RR^2\to\RR$ and any closed subset $D\subset F$, 
-the maximum of restrictions $(\alpha-\lambda)|_D$ admits a maximum point on the boundary $\partial D$.
+the maximum of restrictions $(\alpha-\lambda)|_D$ admits a maximum point on the boundary $\partial D$ --- if not, then a plane $z=\lambda(x,y)+c$ cuts a hat in $D$.
 
 Now let us start to prove the claim.
 
 Assume contrary, that is $\alpha(s)<\beta(s)$ for some $s\in F$.
 Note that $s$ lies in the interior of $F$ and we can find a pair of points $p$ and $q$ arbitrary close to $s$
-such that $\alpha(q)>\beta(p)+\eps$ for some fixed $\eps>0$.
+such that 
+\[\alpha(q)>\beta(p)+\eps\]
+for some fixed $\eps>0$.
 
 Draw the chord $[a,b]$ of $F$ containing $p$ and $q$;
 we assume that the points $a,p,q,b$ appear on the chord in this order.
@@ -304,7 +310,9 @@ Set
 \[\Theta_t=\set{u\in F}{\alpha(u)>\lambda_t(u)};\]
 note that $\Theta_t$ is open in $F$ and $\Theta_t\ni a,q$ and $\Theta_t\not\ni p,b$ for any $t$.
 
-We say that the value $t$ is right (left) if $a$ can be connected to $q$ by a curve in $\Theta_t$ which goes on right (correspondingly left) from $p$.
+We say that the value $t$ is left (right) if $a$ can be connected to $q$ by a curve in $\Theta_t$ which goes on left (correspondingly right) from $p$.
+
+Since $\Sigma$ is saddle, a value $t$ can not be left and right at the same time --- if it is the case, then $\Pi_t$ cuts a hat from $\Sigma$.
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(5 mm),r(0 mm),l(0 mm)]{pics/yin-yang--left(1)}
@@ -335,13 +343,11 @@ We say that the value $t$ is right (left) if $a$ can be connected to $q$ by a cu
 \end{lpic}
 \end{center}
 
-Since $\Sigma$ is saddle, a value $t$ can not be right and left at the same time --- if it is the case, then $\Pi_t$ cuts a hat from $\Sigma$.
-
-The sets of right (left) values are open in $[0,1]$.
+The sets of left (right) values are open in $[0,1]$.
 We can assume that all values $t\approx0$ are left and all values $t\approx1$ are right.
 Therefore there is a value $t$ which is neither left nor right.
 
-Fix this value from now on.
+\so{Fix} this value $t$ from now on.
 Note that the connected component $\Theta_t'\ni q$ in $\Theta_t$ does not contain $a$.
 
 Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_t)|_{\Theta_t'}$ admits its maximum on $\partial F\cap \Theta_t'$.
@@ -358,7 +364,7 @@ It follows that $\theta$ lies in a thin strip $S$ described by the inequalities
 \[0\le \lambda_t\le 1.\]
 
 Since $p$ and $q$ are close to $s$, 
-the slope of $\lambda$ and therefore $\lambda_t$ can be made arbitrary large;
+ $\lambda$ and therefore the slope of $\lambda_t$ can be made arbitrary large;
 therefore the strip $S$ can be assumed to be arbitrary thin.
 It follows that the arc $\theta$ can be assumed to be  arbitrary short.
 (Here we use that $s$ lies in the interior of $F$ and $s\in S$.)
@@ -402,7 +408,7 @@ A correct proof of the baby theorem can be build on the deep theorem of Shefel \
 Let us extend the map of the disc by the identity map outside the disc. 
 According to Shefel's theorem the induced length metric on the plane is $\CAT[0]$.
 This metric coincides with the Euclidean metric outside a compact set 
-therefore the induced intrinsic metric is flat and the map is isometric for this metric;
+therefore the induced intrinsic metric is flat and the map preserves this metric;
 in particular it is a homeomorphism.\qeds
 
 {
@@ -415,7 +421,7 @@ in particular it is a homeomorphism.\qeds
 \parbf{A generalization of the monotonicity theorem.}
 In the proof the condition that $\Delta$ is a disc can be relaxed to the following:
 the mapping cylinder of the target space over $f|_{\partial\DD}$ is homeomorphic to a closed disc.
-So the target space $\Delta$ might look like the solid figure eight on the picture.
+For example, the target space $\Delta$ might look like the solid figure eight on the picture.
 
 Under the name \emph{disc retracts}, these type of spaces are used in our paper \cite{petrunin-stadler} on a closely related subject. 
 
@@ -426,6 +432,7 @@ If $f\:\DD\to \Sigma$ is a harmonic map from a closed disc to a surface with a R
 then one can show that for any $y\notin f(\partial\DD)$ the inverse image $f^{-1}\{y\}$ is a discrete set of points.
 A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenko}.
 In particular, $f$ is light if $f^{-1}\{f(x)\}=\{x\}$ for any $x\in\partial \DD$.
+It reduces the univalentness theorems in \cite{schoen-yau} and \cite{jost} to our monotonicity theorem.
 
 As it shown by Ernst Kuwert (\cite[Theorem 3]{Ku}) the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
 Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for one cone point $q$ where it has negative curvature and (2) a harmonic map $f\:\DD\to \Delta$ such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
@@ -433,9 +440,9 @@ Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for o
 Therefore, the monotonicity theorem is optimal even for harmonic maps.
 
 \parbf{On saddle graph theorem.}
-One could define saddle disc in $\CAT[0]$ space as the subset $\Sigma$ homeomorphic to disc such that for any closed convex set $K$ and connected component of $\Sigma\backslash K$ meets the boundary.
+The property \ref{claim}\textit{(\ref{claim:i})} can be used to define saddle disc in arbitrary $\CAT[0]$ space.
 
-With this definition, the saddle graph theorem, does not hold for saddle discs in the product space $C\times \RR$, where $C$ is a cone with large total angle --- the vertical line in the product space $C\times \RR$ might intersect the saddle disc along a nontrivial segment.
+With this definition, the saddle graph theorem, does not hold in the product space $C\times \RR$, where $C$ is a cone with large total angle --- if $o$ is the tip of the cone then the vertical line $\{o\}\times\RR$ might intersect the saddle disc along a nontrivial segment.
 An example can be build from the quoted construction of Ernst Kuwert, but actually simpler.
 
 
