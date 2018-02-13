@@ -16,7 +16,7 @@ Anton Petrunin, \par\nopagebreak\textsc{Department of Mathematics, PSU, Universi
 \textit{Email}: \texttt{petrunin@math.psu.edu}
 
 \medskip
- 
+
 Stephan Stadler,
 \par\nopagebreak\textsc{Mathematisches Institut der Universit\"at M\"unchen, Theresienstr. 39, D-80333 M\"unchen, Germany}
 \par\nopagebreak
@@ -33,7 +33,7 @@ We prove an analog of Schoen--Yau univalentness theorem for saddle maps between 
 
 \section{Introduction}
 
-A map from a closed disc $\DD$ to a Euclidean space is called \emph{saddle} if for any hyperplane $\Pi$ each connected component of the 
+A map from a closed unit disc $\DD$ to a Euclidean space is called \emph{saddle} if for any hyperplane $\Pi$ each connected component of the 
 complement $\DD\backslash f^{-1}\Pi$ intersects the boundary~$\partial \DD$.
 A connected component which does not meet the boundary will be called \emph{hat},
 so saddle map can be defined as a \emph{map with no hats}.
@@ -60,10 +60,10 @@ Then $f$ is a homeomorphism.
 Let $\Delta$ be a surface with possibly nonempty boundary and geodesic metric.
 A map $f$ from a closed disc $\DD$ to $\Delta$ is called \emph{saddle} 
 if for any geodesic $[x,y]$ in $\Delta$, each connected component of the complement $\DD\backslash f^{-1}[x,y]$ meets the boundary~$\partial\DD$.
-It is easy to see that this definition agrees with the one given above.
+It is easy to see that if $\Delta$ is the plane then this new definition of saddle map agrees with the one given above.
 
 A continuous map $f\:X\to Y$ is called \emph{monotone} if the inverse image of any point $y\in Y$ is connected.
-Since a connected space is nonempty by definition, any monotone map is onto.
+Note that since a connected space is nonempty by definition, any monotone map is onto.
 
 \begin{thm}{Monotonicity theorem}\label{thm:main}
 Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
@@ -75,7 +75,7 @@ Then $f$ is monotone.
 
 In other words, the theorem states that monotonicity is an appropriate generalization of univalentness which works for saddle maps.
 
-Note that class of spaces satisfying the assumption for $\Delta$ contains any disc with a $\CAT[0]$ metric.
+Note that the class of spaces satisfying the assumption for $\Delta$ contains any disc with a $\CAT[0]$ metric.
 Moreover, this class includes nonpositively curved surfaces considered in the original univalentness theorem in \cite{schoen-yau}
 as well as the surfaces described in \cite{jost}.
 
@@ -112,7 +112,7 @@ We want to thank the referee for keen comments.
 Recall that harmonic maps $f\:M\to N$ between Riemannian manifolds can be defined as local energy minimizers 
 among maps with fixed values on the boundary.
 Here the energy is defined as 
-\[E(f)=\int_M|df|^2\cdot d\mathrm{vol},\]
+\[E(f)=\int_M|df|^2,\]
 where $df\:\T M\to \T N$ is the differential of~$f$.
 
 \begin{thm}{Proposition} 
@@ -160,7 +160,7 @@ the harmonic maps into such spaces can also be defined as local energy minimizer
 \section{Monotonicity}
 
 \begin{thm}{Claim}\label{claim}
-Let $f\:\DD\to \Delta$ be as in the monotonicity theorem.
+Let $f\:\DD\to \Delta$ be as in the monotonicity theorem (\ref{thm:main}).
 Then 
 \begin{enumerate}[(i)]
 \item\label{claim:i} for any closed convex set $K\subset\Delta$ each connected component of $\DD\backslash f^{-1}K$ intersects~$\partial\DD$.
@@ -173,9 +173,8 @@ Let $\gamma$ be a geodesic in $\Delta$, disjoint from $K$ and with endpoints on~
 Let $\Sigma_K$ be the set of all such geodesics.
 For each $\gamma\in\Sigma_K$ denote by
 $H_\gamma$ the component of $\Delta\backslash\gamma$ which contains~$K$.
-Then
-\[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma\]
-since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc.
+Since $K$ is closed and convex and $\Delta$ is homeomorphic to a disc, we have
+\[K=\bigcap_{\gamma\in\Sigma_K} H_\gamma.\]
 In other words, if $x\notin K$ then some geodesic separates $K$ from~$x$. %MORE???
 
 By definition of saddle maps, each connected component of $\DD\backslash f^{-1}H_\gamma$ meets the boundary~$\partial\DD$.
@@ -183,7 +182,8 @@ Therefore the same holds for the union
 \[\DD\backslash f^{-1}K=\bigcup_{\gamma\in\Sigma_K}(\DD\backslash f^{-1}H_\gamma).\]
 
 \parit{(ii)}
-Choose a simple closed curve $\gamma\:\SS^1\to\Psi=f^{-1}\Phi$;
+Set $\Psi=f^{-1}\Phi\subset\DD$.
+Choose a simple closed curve $\gamma\:\SS^1\to\Psi$;
 denote by $\Gamma$ the disc bounded by~$\gamma$.
 By \textit{(i)}, $f(\Gamma)$ lies in the convex hull of $f(\gamma)$ which will be denoted by~$K$.
 Since $\Phi$ is convex, $K\subset \Phi$.
@@ -347,7 +347,7 @@ The sets of left (right) values are open in $[0,1]$.
 We can assume that all values $t\approx0$ are left and all values $t\approx1$ are right.
 Therefore there is a value $t$ which is neither left nor right.
 
-\so{Fix} this value $t$ from now on.
+\so{Fix this value $t$} from now on.
 Note that the connected component $\Theta_t'\ni q$ in $\Theta_t$ does not contain $a$.
 
 Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_t)|_{\Theta_t'}$ admits its maximum on $\partial F\cap \Theta_t'$.
@@ -364,7 +364,7 @@ It follows that $\theta$ lies in a thin strip $S$ described by the inequalities
 \[0\le \lambda_t\le 1.\]
 
 Since $p$ and $q$ are close to $s$, 
- $\lambda$ and therefore the slope of $\lambda_t$ can be made arbitrary large;
+ the slope of $\lambda$ and therefore the slope of $\lambda_t$ can be made arbitrary large;
 therefore the strip $S$ can be assumed to be arbitrary thin.
 It follows that the arc $\theta$ can be assumed to be  arbitrary short.
 (Here we use that $s$ lies in the interior of $F$ and $s\in S$.)
@@ -441,7 +441,6 @@ Therefore, the monotonicity theorem is optimal even for harmonic maps.
 
 \parbf{On saddle graph theorem.}
 The property \ref{claim}\textit{(\ref{claim:i})} can be used to define saddle disc in arbitrary $\CAT[0]$ space.
-
 With this definition, the saddle graph theorem, does not hold in the product space $C\times \RR$, where $C$ is a cone with large total angle --- if $o$ is the tip of the cone then the vertical line $\{o\}\times\RR$ might intersect the saddle disc along a nontrivial segment.
 An example can be build from the quoted construction of Ernst Kuwert, but actually simpler.
 
