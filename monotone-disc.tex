@@ -105,7 +105,7 @@ In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a co
 \medskip
 
 \parbf{Acknowledgements.}
-We want to thank the referee for keen comments.
+We want to thank the anonymous referee for keen comments.
 
 \section{Energy minimizing maps are saddle}
 
@@ -261,15 +261,16 @@ Denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection o
 Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
 in particular the projection of $\Sigma$ lies in~$F$.
 Therefore the monotonicity theorem can be applied to the
-the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection sends $\DD\to F$.
+the composition of the embedding $\DD\hookrightarrow \RR^3$ which describes $\Sigma$ and the projection
+to the $(x,y)$-plane. The composition sends $\DD\to F$.
 
-It follows that, any vertical line in $F\times \RR$ intersects $\Sigma$ along a closed interval or a point.
+It follows that any vertical line in $F\times \RR$ intersects $\Sigma$ along a closed interval or a point.
 In other words, there are two functions $\alpha,\beta\:F\to \RR$
 such that 
 \[(x,y,z)\in \Sigma
 \quad\iff\quad
 \alpha(x,y)\le z\le \beta(x,y).\]
-Therefore to prove the saddle graph theorem it is sufficient to show the following:
+Therefore, to prove the saddle graph theorem it is sufficient to show the following:
 
 \begin{thm}{Claim}
 $\alpha\equiv \beta$.
@@ -278,14 +279,14 @@ $\alpha\equiv \beta$.
 Before proving the claim let us list properties of the functions $\alpha$ and~$\beta$. 
 
 Note that the function $\alpha\:F\to \RR$ is lower semicontinuous
-and $\beta\:F\to \RR$ is an upper semicontinuous.
-Further $\alpha$ and $\beta$ agree on $\partial F$ and the 
+and $\beta\:F\to \RR$ is upper semicontinuous.
+Further, $\alpha$ and $\beta$ agree on $\partial F$ and the 
 restriction $\alpha|_{\partial F}=\beta|_{\partial F}$ is continuous.
-In particular if an arc $\theta\subset \partial F$ is sufficiently short, then
+In particular, if an arc $\theta\subset \partial F$ is sufficiently short, then
 the change of values of $\alpha$ in $\theta$ is small.
 
-Since $\Sigma$ is saddle, for any linear function $\lambda\:\RR^2\to\RR$ and any closed subset $D\subset F$, 
-the maximum of restrictions $(\alpha-\lambda)|_D$ admits a maximum point on the boundary $\partial D$ --- if not, then a plane $z=\lambda(x,y)+c$ cuts a hat in $D$.
+Since $\Sigma$ is saddle, for any linear function $\lambda\:\RR^2\to\RR$ and any closed domain $D\subset F$, 
+the restriction $(\alpha-\lambda)|_D$ admits a maximum point on the boundary $\partial D$ --- if not, then a plane $z=\lambda(x,y)+c$ cuts a hat in $D$.
 
 Now let us start to prove the claim.
 
@@ -302,9 +303,9 @@ Consider the linear function $\lambda\:[a,b]\to \RR$ such that
 \[\lambda(p)=\beta(p)+\tfrac\eps3,\quad\lambda(q)=\alpha(p)-\tfrac\eps3.\]
 Let $\ell$ be the graph of $\lambda$ over $[a,b]$; it is a line segment in $F\times \RR$.
 
-Consider one parameter family of planes $\Pi_t\supset \ell$, $t\in(0,1)$ which rotates by angle $\pi$ approaching the vertical plane as $t$ goes to $0$ or $1$.
+Consider a one parameter family of planes $\Pi_t\supset \ell$, $t\in(0,1)$ which rotates by angle $\pi$ approaching the vertical plane as $t$ goes to $0$ or $1$.
 
-Note that the plane $\Pi_t$ is a graph of linear function $\lambda_t\:\RR^2\to \RR$ 
+Note that the plane $\Pi_t$ is a graph of a linear function $\lambda_t\:\RR^2\to \RR$ 
 and the restriction $\lambda_t|_{[a,b]}$ agrees with $\lambda$ for any $t$.
 Set 
 \[\Theta_t=\set{u\in F}{\alpha(u)>\lambda_t(u)};\]
@@ -345,35 +346,35 @@ Since $\Sigma$ is saddle, a value $t$ can not be left and right at the same time
 
 The sets of left (right) values are open in $[0,1]$.
 We can assume that all values $t\approx0$ are left and all values $t\approx1$ are right.
-Therefore there is a value $t$ which is neither left nor right.
+Therefore there is a value $t_0$ which is neither left nor right.
 
-\so{Fix this value $t$} from now on.
-Note that the connected component $\Theta_t'\ni q$ in $\Theta_t$ does not contain $a$.
+\so{Fix this value $t_0$} from now on.
+Note that the connected component $\Theta_{t_0}'\ni q$ in $\Theta_{t_0}$ does not contain $a$.
 
-Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_t)|_{\Theta_t'}$ admits its maximum on $\partial F\cap \Theta_t'$.
-By construction $\alpha(q)-\lambda_t(q)>\tfrac\eps3$; 
+Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_{t_0})|_{\Theta_{t_0}'}$ admits its maximum on $\partial F\cap \Theta_{t_0}'$.
+By construction $\alpha(q)-\lambda_{t_0}(q)>\tfrac\eps3$; 
 therefore 
-\[\alpha(r)-\lambda_t(r)>\tfrac\eps3
+\[\alpha(r)-\lambda_{t_0}(r)>\tfrac\eps3
 \eqlbl{eq:alpha-lambda(r)}
 \] 
-for some $r\in \partial F\cap \Theta_t'$.
+for some $r\in \partial F\cap \Theta_{t_0}'$.
 
-Denote by $\theta$ the connected component of $r$ in $\partial F\cap \Theta_t'$.
-Without loss of generality, we can assume that $z$-coordinate of points on $\Sigma$ are between 0 and 1.
+Denote by $\theta$ the connected component of $r$ in $\partial F\cap \Theta_{t_0}'$.
+Without loss of generality, we can assume that the $z$-coordinate of points on $\Sigma$ are between 0 and 1.
 It follows that $\theta$ lies in a thin strip $S$ described by the inequalities
-\[0\le \lambda_t\le 1.\]
+\[0\le \lambda_{t_0}\le 1.\]
 
 Since $p$ and $q$ are close to $s$, 
- the slope of $\lambda$ and therefore the slope of $\lambda_t$ can be made arbitrary large;
+ the slope of $\lambda$ and therefore the slope of $\lambda_{t_0}$ can be made arbitrary large;
 therefore the strip $S$ can be assumed to be arbitrary thin.
 It follows that the arc $\theta$ can be assumed to be  arbitrary short.
 (Here we use that $s$ lies in the interior of $F$ and $s\in S$.)
 Therefore the change of values of $\alpha$ in $\theta$ can be assumed to be arbitrary small.
 
-Note that $\lambda_t$ is monotonic on $\theta$ and 
-the function $\alpha-\lambda_t$ vanish on the ends on $\theta$.
+Note that $\lambda_{t_0}$ is monotonic on $\theta$ and 
+the function $\alpha-\lambda_{t_0}$ vanish on the ends of $\theta$.
 It follows that 
-\[\sup\set{\alpha(u)-\lambda_t(u)}{u\in\theta}\]
+\[\sup\set{\alpha(u)-\lambda_{t_0}(u)}{u\in\theta}\]
 can be assumed to be arbitrary small.
 The latter contradicts \ref{eq:alpha-lambda(r)}.
 \qeds
