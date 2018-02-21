@@ -66,7 +66,7 @@ A continuous map $f\:X\to Y$ is called \emph{monotone} if the inverse image of a
 Note that since a connected space is nonempty by definition, any monotone map is onto.
 
 \begin{thm}{Monotonicity theorem}\label{thm:main}
-Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT[\kappa]$ metric 
+Let $\Delta=(\DD,|{*}-{*}|)$ be a closed disc equipped with a $\CAT(\kappa)$ metric 
 such that any two points are joined by a unique geodesic and it depends continuously on the end points.
 Assume $f\:\DD\to \Delta$ is a saddle map and the restriction of $f$ to the boundary $\partial\Delta$ is a monotone map 
 $\partial\DD\to\partial\Delta$.
@@ -89,8 +89,8 @@ The latter implies that $h$ is a homeomorphism.
 
 The following theorem is a generalization of the problem ``Saddle surface'' in~\cite{petrunin-orthodox}.
 Together with Shefel's theorem (see \cite{shefel-3D} and \cite[4.5.5]{akp}) it implies that the induced 
-intrinsic metric on $\Sigma$ satisfies the $\CAT[0]$ comparison. 
-(It is not known whether any saddle surface in the Euclidean space has locally $\CAT[0]$ induced intrinsic metric.)
+intrinsic metric on $\Sigma$ satisfies the $\CAT(0)$ comparison. 
+(It is not known whether any saddle surface in the Euclidean space has locally $\CAT(0)$ induced intrinsic metric.)
 
 \begin{thm}{Saddle graph theorem}\label{cor:projection}
 Let $\Sigma$ be a saddle surface in $\RR^3$ homeomorphic to a disc.
@@ -256,6 +256,8 @@ Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a cu
 
 \section{Saddle graph}
 
+The following proof reminds proof of Sergei Bernstein in \cite{bernstein}.
+
 \parit{Proof of the saddle graph theorem (\ref{cor:projection}).}
 Denote by $F$ the convex figure in the $(x,y)$-plane bounded by the projection of boundary of~$\Sigma$.
 Since $\Sigma$ is saddle, it lies in the convex hull of its boundary;
@@ -406,7 +408,7 @@ A correct proof of the baby theorem can be build on the deep theorem of Shefel \
 
 \parit{Proof.}
 Let us extend the map of the disc by the identity map outside the disc. 
-According to Shefel's theorem the induced length metric on the plane is $\CAT[0]$.
+According to Shefel's theorem the induced length metric on the plane is $\CAT(0)$.
 This metric coincides with the Euclidean metric outside a compact set 
 therefore the induced intrinsic metric is flat and the map preserves this metric;
 in particular it is a homeomorphism.\qeds
@@ -434,13 +436,13 @@ A proof of this statement was suggested by Alexandre Eremenko, see \cite{eremenk
 In particular, $f$ is light if $f^{-1}\{f(x)\}=\{x\}$ for any $x\in\partial \DD$.
 It reduces the univalentness theorems in \cite{schoen-yau} and \cite{jost} to our monotonicity theorem.
 
-As it shown by Ernst Kuwert (\cite[Theorem 3]{Ku}) the corresponding statement for surfaces with $\CAT[0]$ metrics is wrong. 
+As it shown by Ernst Kuwert (\cite[Theorem 3]{Ku}) the corresponding statement for surfaces with $\CAT(0)$ metrics is wrong. 
 Namely, there are (1) a disc $\Delta$ with a flat metric everywhere except for one cone point $q$ where it has negative curvature and (2) a harmonic map $f\:\DD\to \Delta$ such that $f$ restricts to a homeomorphism between boundaries but $f^{-1}\{q\}$ is a nontrivial tree.
 
 Therefore, the monotonicity theorem is optimal even for harmonic maps.
 
 \parbf{On saddle graph theorem.}
-The property \ref{claim}\textit{(\ref{claim:i})} can be used to define saddle disc in arbitrary $\CAT[0]$ space.
+The property \ref{claim}\textit{(\ref{claim:i})} can be used to define saddle disc in arbitrary $\CAT(0)$ space.
 With this definition, the saddle graph theorem, does not hold in the product space $C\times \RR$, where $C$ is a cone with large total angle --- if $o$ is the tip of the cone then the vertical line $\{o\}\times\RR$ might intersect the saddle disc along a nontrivial segment.
 An example can be build from the quoted construction of Ernst Kuwert, but actually simpler.
 
@@ -458,8 +460,20 @@ An example can be build from the quoted construction of Ernst Kuwert, but actual
 
 \bibitem{akp}
 Alexander, S.; Kapovitch, V. and Petrunin, A.,
-\textit{Invitation to Alexandrov geometry: CAT [0] spaces.}
+\textit{Invitation to Alexandrov geometry:} CAT(0) \textit{spaces.}
 arXiv:1701.03483.
+
+\bibitem{bernstein}
+\begin{otherlanguage}{russian}
+Бернштейн, С. Н., \textit{Об одной геометрической теореме и её приложениях к
+уравнениям в частных производных эллептического типа.} 
+Собрание сочинений. Т. 3. М.: Издалельство АН СССР, 1960, с. 251---258.
+\end{otherlanguage}
+French original: \textit{Sur un th\'{e}or\'{e}me de g\'{e}om\'{e}trie et son application aux \'{e}quations aux d\'{e}riv\'{e}es partielles du type elliptique.}
+\begin{otherlanguage}{russian}
+Сообщ. Харьк.-матем. об-ва, 15, № 1 (1915), 38---45\end{otherlanguage};
+German translation in Math. Ztschr., 26 (1927), 551--558;
+
 
 \bibitem{eremenko} Eremenko, A., 
 an answer to \textit{Harmonic maps are light.} MathOverflow
