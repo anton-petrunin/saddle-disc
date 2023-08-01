@@ -234,7 +234,8 @@ The projection $\DD\times\partial\Delta\to \DD$ sends $\Omega$ to~$\Theta$.
 Note that the induced homomorphism \textit{$\pi_1\Omega\to \pi_1\Theta$ is onto}.
 Indeed, for any point $z\in \Theta$ there is $s\in \partial\Delta$ such that $f(z)\in \Phi_s$ or equivalently $\measuredangle [x\,^{f(z)}_s]<\tfrac\pi2$.
 Moreover, since $f|_{\partial\DD}$ is monotone, the set of points $s$ satisfying the above condition is an open arc in $\partial\Delta$.
-It follows that one can fix a continuous map $z\mapsto s_z$ such that $f(z)\in \Phi_{s_z}$ for any $z\in \Theta$.
+By \cite[Theorem 2]{ungar}, one can fix a continuous map $z\mapsto s_z$ such that $f(z)\in \Phi_{s_z}$ for any $z\in \Theta$;
+see .
 Then for any loop $\alpha$ in $\Theta$, the loop $\tilde\alpha(t)=(\alpha(t),s_{\alpha(t)})$ is an $f$-lift of $\alpha$ in $\Omega\subset\DD\times\partial\Delta$.
 
 Note that $\Theta\cap \partial\DD$ is connected.
@@ -258,6 +259,7 @@ In particular, $\sigma_s$ is connected and so is~$\Psi_s$.
 Since $\Phi_s$ is a convex open set, by Claim \ref{claim}\textit{(\ref{claim:ii})}, $\Psi_s$ is simply connected.
 
 Note that $\Phi_s=\emptyset\iff s=x$.
+Applying \cite[Theorem 2]{ungar} again, we get the following.
 \begin{itemize}
 \item If $x\notin\partial\DD$, then from above $\Psi_s$ is simply connected for any~$s$.
 Therefore the projection $\Omega\to \partial\Delta$ induces an isomorphism of fundamental groups; that is $\pi_1\Omega=\ZZ$.
@@ -266,8 +268,8 @@ Therefore the projection $\Omega\to \partial\Delta$ induces an isomorphism of fu
 
 Since $f^{-1}\{x\}$ is not connected, it can be divided into two subsets by a curve in~$\Theta$.
 \begin{itemize}
-\item If $x\notin\partial \DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain a free group with two generators --- a contradiction.
-\item If $x\in\partial\DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contain $\ZZ$ as a subgroup --- a contradiction again.\qeds
+\item If $x\notin\partial \DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contains a free group with two generators --- a contradiction.
+\item If $x\in\partial\DD$, it follows that $\pi_1\Theta$ and therefore $\pi_1\Omega$ contains $\ZZ$ as a subgroup --- a contradiction again.\qeds
 \end{itemize}
 
 \section{Saddle graph}
@@ -367,7 +369,7 @@ Therefore some value, say $t_0$, is neither left nor right.
 
 Note that the connected component $\Theta_{t_0}'\ni q$ in $\Theta_{t_0}$ does not contain $a$.
 
-Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_{t_0})|_{\Theta_{t_0}'}$ admits its maximum on $\partial F\cap \Theta_{t_0}'$.
+Since $\Sigma$ is saddle, the restriction $(\alpha-\lambda_{t_0})|_{\Theta_{t_0}'}$ admits its maximum on $\partial F\zz\cap \Theta_{t_0}'$.
 By construction $\alpha(q)-\lambda_{t_0}(q)>\tfrac\eps3$; 
 therefore 
 \[\alpha(r)-\lambda_{t_0}(r)>\tfrac\eps3
@@ -475,8 +477,7 @@ An example can be built from the quoted construction of Ernst Kuwert, but actual
 
 \bibitem{akp}
 Alexander, S.; Kapovitch, V. and Petrunin, A.,
-\textit{Invitation to Alexandrov geometry:} CAT(0) \textit{spaces.}
-arXiv:1701.03483.
+\textit{An invitation to Alexandrov geometry:} CAT(0) \textit{spaces.} SpringerBriefs in Mathematics. Springer, Cham, 2019.
 
 \bibitem{bernstein}
 Bernstein, S., \textit{Sur un th\'{e}or\'{e}me de g\'{e}om\'{e}trie et son application aux \'{e}quations aux d\'{e}riv\'{e}es partielles du type elliptique.}
@@ -490,6 +491,9 @@ and in С. Н. Бернштейн, Собрание сочинений. Т. 3. (
 \end{otherlanguage}
 German translation in Math. Ztschr., 26 (1927), 551--558;
 
+\bibitem{eilenberg} Eilenberg, S.,
+\textit{Sur les transformations continues d’espaces m\'{e}trique compacts.}
+Fund. Math. 22 (1934), 292--296.
 
 \bibitem{eremenko} Eremenko, A., 
 an answer to \textit{Harmonic maps are light.} MathOverflow
@@ -521,7 +525,8 @@ Trans. Amer. Math. Soc. 27 no. 4 (1925) pp. 416--428.
 AMR Monographs, 2 (2022).
 
 \bibitem{petrunin-stadler} Petrunin, A.; Stadler, S., 
-\textit{Metric minimzing surfaces revisited.} \texttt{arXiv:1707.09635}
+\textit{Metric minimizing surfaces revisited.} 
+Geom. Topol. 23 (2019), no. 6, 3111--3139.
 
 \bibitem{shefel-2D} 
 \begin{otherlanguage}{russian}
@@ -551,11 +556,11 @@ AMR Monographs, 2 (2022).
 
 \bibitem{schoen-yau} Schoen, R.; Yau, S.-T.,
 \textit{On univalent harmonic maps between surfaces.}
-Invent. Math. 44 (1978), no. 3, 265--278. 
+Invent. Math. 44 (1978), no. 3, 265--278.
 
-\bibitem{eilenberg} Eilenberg, S.,
-\textit{Sur les transformations continues d’espaces m\'{e}trique compacts.}
-Fund. Math. 22, 292--296 (1934)
+\bibitem{ungar} Ungar, G. S.
+\textit{Conditions for a mapping to have the slicing structure property.}
+Pacific J. Math. 30 (1969), 549--553.
 
 \end{thebibliography}
 
