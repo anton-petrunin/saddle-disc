@@ -1,0 +1,7 @@
+metric-min.sty
+monotone-disc.tex
+pics/cutting-hat.eps
+pics/mapping-cylinder.eps
+pics/yin-yang--left.eps
+pics/yin-yang--middle.eps
+pics/yin-yang--right.eps
